@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "DAPPR",
+  "status": "Project synthesis; not attributed to any one source",
+  "thesis": "An AI transition is legitimate only when it protects intrinsic dignity, expands meaningful human agency, enables cooperation across difference, makes concentrations of power accountable, and preserves the ability to stop, revise, and repair.",
+  "lenses": [
+    {
+      "id": "dignity",
+      "name": "Dignity",
+      "question": "Are people treated as ends, never merely as data, labor, targets, scores, or risk?",
+      "evidence": [
+        "Protected rights and unacceptable uses",
+        "Assessment of people who cannot meaningfully consent",
+        "Treatment of embodiment, care, relationship, and vulnerable groups",
+        "Remedy proportionate to stakes",
+        "Supply-chain and labor conditions"
+      ],
+      "failureMode": "Dignity appears in a preamble, but no actor can stop or repair the system."
+    },
+    {
+      "id": "agency",
+      "name": "Agency",
+      "question": "Can affected people understand, refuse, contest, alter, and exit the arrangement?",
+      "evidence": [
+        "Intelligible notice and reasons",
+        "Refusal without loss of an essential good where feasible",
+        "A reviewer with authority, time, and protection",
+        "Accessible appeal and correction",
+        "Resources that make participation practical",
+        "Preservation of human skill and judgment"
+      ],
+      "failureMode": "A powerless person remains in the loop and absorbs blame."
+    },
+    {
+      "id": "plurality",
+      "name": "Plurality",
+      "question": "Can people cooperate across difference without forced sameness?",
+      "evidence": [
+        "Multiple publics involved before problem framing closes",
+        "Visibility of minority-intense needs",
+        "Language, disability, cultural, and regional access",
+        "Explanation of agenda construction and moderation",
+        "Legitimate disagreement retained in the record"
+      ],
+      "failureMode": "A single aggregate score turns disagreement into measurement error."
+    },
+    {
+      "id": "power",
+      "name": "Power",
+      "question": "Who sets the end, owns the stack, captures gains, and bears responsibility?",
+      "evidence": [
+        "Decision-rights and ownership map",
+        "Incentive and resource flows",
+        "Independent oversight with access and enforcement",
+        "Labor and community bargaining power",
+        "Public technical capacity",
+        "Conflicts of interest",
+        "Liability and named duty bearers"
+      ],
+      "failureMode": "Governance constrains a model while leaving procurement, capital, and platform power untouched."
+    },
+    {
+      "id": "reversibility",
+      "name": "Reversibility",
+      "question": "What can still be stopped, changed, repaired, or withdrawn?",
+      "evidence": [
+        "Pre-deployment decision gates",
+        "Monitoring tied to action thresholds",
+        "Rollback and service continuity",
+        "Sunset and renewal dates",
+        "Incident response and compensation",
+        "Retirement and data disposition",
+        "A process for future communities to change the rules"
+      ],
+      "failureMode": "A pilot becomes permanent before evidence is reviewed."
+    }
+  ],
+  "epistemicLabels": [
+    {
+      "id": "fact",
+      "name": "Observed fact",
+      "definition": "A directly checkable past or present condition."
+    },
+    {
+      "id": "source-claim",
+      "name": "Source claim",
+      "definition": "An author's empirical, causal, or interpretive assertion."
+    },
+    {
+      "id": "scenario",
+      "name": "Scenario",
+      "definition": "An intentionally constructed possible future."
+    },
+    {
+      "id": "recommendation",
+      "name": "Recommendation",
+      "definition": "What an author argues should happen."
+    },
+    {
+      "id": "synthesis",
+      "name": "Synthesis",
+      "definition": "An interpretation developed in this project."
+    },
+    {
+      "id": "question",
+      "name": "Question",
+      "definition": "An unresolved crux for discussion or research."
+    }
+  ]
+}

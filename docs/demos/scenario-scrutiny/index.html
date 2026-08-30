@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scenario Scrutiny Canvas — The Human Choice Field Guide</title>
+<meta name="description" content="A fillable, exportable, dated policy stress-test for scenario claims such as AI 2027 and AI 2040: Plan A. Educational tool; data stays in your browser only.">
+<link rel="icon" href="data:,">
+<style>
+/* Inlined so this single file is fully self-contained and portable. */
+:root {
+  --paper:#f4ecdc; --paper-raised:#fbf5e8; --paper-deep:#ece0c8; --ink:#241c14; --ink-soft:#4a3d2c; --ink-faint:#7a6b52;
+  --rule:#cdbb96; --rule-soft:#e3d5b3; --accent:#8a2e2e; --accent-soft:#f0dcd1; --accent-2:#2f5233; --accent-2-soft:#dee8dc;
+  --accent-3:#1f3a5f; --accent-3-soft:#dbe3ee; --gold:#a9781f; --gold-soft:#f2e3bd; --radius:3px;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.6;font-size:1.02rem;}
+.demo-header{background:var(--paper-raised);border-bottom:3px double var(--rule);padding:0.9rem 1.2rem;display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;justify-content:space-between;}
+.demo-header a.back-link{font-family:var(--sans);font-weight:700;font-size:0.85rem;text-decoration:none;color:var(--accent);}
+.demo-header a.back-link:hover{color:var(--ink);}
+.demo-title{font-family:var(--sans);font-size:0.95rem;font-weight:700;color:var(--ink-soft);}
+main.demo-main{max-width:60rem;margin:0 auto;padding:2rem 1.2rem 4rem;}
+h1,h2,h3{font-family:var(--serif);}
+.demo-disclaimer{font-family:var(--sans);font-size:0.86rem;background:var(--gold-soft);border-left:4px solid var(--gold);padding:0.9rem 1.1rem;border-radius:var(--radius);margin:1rem 0 1.6rem;color:var(--ink-soft);}
+.btn{font-family:var(--sans);display:inline-block;text-decoration:none;cursor:pointer;padding:0.55rem 1.05rem;border-radius:var(--radius);font-size:0.9rem;font-weight:600;border:1px solid transparent;line-height:1.3;}
+.btn--primary{background:var(--accent);color:var(--paper-raised);border-color:var(--accent);}
+.btn--primary:hover{background:#6f2323;color:#fff;}
+.btn--ghost{background:var(--paper-deep);color:var(--ink-soft);border-color:var(--rule);}
+.btn--ghost:hover{background:var(--rule-soft);color:var(--ink);}
+.btn[disabled]{opacity:0.5;cursor:not-allowed;}
+label{font-family:var(--sans);font-weight:600;font-size:0.88rem;display:block;margin-bottom:0.3rem;}
+input[type="text"],input[type="date"],textarea,select{font-family:var(--sans);border:1px solid var(--rule);background:var(--paper-raised);color:var(--ink);padding:0.5rem 0.6rem;border-radius:var(--radius);width:100%;}
+textarea{min-height:4.5rem;resize:vertical;}
+fieldset{border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.2rem;margin:0 0 1.2rem;}
+legend{font-family:var(--sans);font-weight:700;padding:0 0.4rem;color:var(--accent-3);}
+.field{margin-bottom:1rem;}
+.field-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem;}
+.card{background:var(--paper-raised);border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:1rem;}
+.status-msg{font-family:var(--sans);font-size:0.85rem;color:var(--accent-2);min-height:1.2em;}
+.toolbar{display:flex;flex-wrap:wrap;gap:0.6rem;margin:1rem 0;}
+table.data-table{width:100%;border-collapse:collapse;margin:1rem 0;}
+table.data-table th,table.data-table td{border:1px solid var(--rule-soft);padding:0.5rem 0.7rem;text-align:left;vertical-align:top;}
+table.data-table th{background:var(--paper-deep);font-family:var(--sans);font-size:0.8rem;text-transform:uppercase;}
+.badge{font-family:var(--sans);font-size:0.68rem;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:999px;font-weight:700;white-space:nowrap;}
+.badge--ok{background:var(--accent-2-soft);color:var(--accent-2);}
+.badge--warn{background:var(--gold-soft);color:var(--gold);}
+.badge--risk{background:var(--accent-soft);color:var(--accent);}
+.footnote{font-family:var(--sans);font-size:0.8rem;color:var(--ink-faint);}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+:focus-visible{outline:3px solid var(--accent-3);outline-offset:2px;}
+.demo-footer{text-align:center;font-family:var(--sans);font-size:0.8rem;color:var(--ink-faint);padding:2rem 1rem 3rem;border-top:1px solid var(--rule-soft);}
+.row-actions{display:flex;gap:0.4rem;}
+.row-actions button{font-size:0.78rem;padding:0.3rem 0.5rem;}
+@media print{.demo-header,.toolbar,.btn,.no-print{display:none !important;}body{background:#fff;color:#000;}}
+</style>
+</head>
+<body>
+<header class="demo-header">
+  <a class="back-link" href="../../index.html#demos">← Back to Field Guide dashboard</a>
+  <span class="demo-title">Demo 1 of 3 · Scenario Scrutiny Canvas</span>
+</header>
+
+<main class="demo-main">
+  <h1>Scenario Scrutiny Canvas</h1>
+  <p class="footnote">Independently portable: this page is a single self-contained HTML file. Copy it anywhere and it still works. Data is saved only in <strong>this browser's localStorage</strong> — nothing is sent anywhere.</p>
+
+  <div class="demo-disclaimer">
+    <strong>What this is:</strong> an educational, fillable stress-test canvas for dated policy scenarios and
+    recommendations (inspired by AI 2027's race/slowdown branches and AI 2040: Plan A's 2029 deal / 2035 pause /
+    2040 unpause milestones). <strong>What this is not:</strong> a predictive tool, a forecast, or an official
+    assessment. Entries you write are your own analysis, not facts. Source scenarios:
+    <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> ·
+    <a href="https://ai-2040.com/" target="_blank" rel="noopener">AI 2040: Plan A</a>.
+  </div>
+
+  <form id="entryForm">
+    <fieldset>
+      <legend>Add a stress-test entry</legend>
+      <div class="field-row">
+        <div class="field">
+          <label for="fDate">Milestone date (as stated in the scenario)</label>
+          <input type="text" id="fDate" placeholder="e.g. 2029, 2035, or 2027-09" required>
+        </div>
+        <div class="field">
+          <label for="fSource">Grounding source</label>
+          <select id="fSource">
+            <option value="AI 2027">AI 2027 (scenario)</option>
+            <option value="AI 2040: Plan A">AI 2040: Plan A (recommendation)</option>
+            <option value="Other / own scenario">Other / own scenario</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fClaim">Scenario claim or milestone being stress-tested</label>
+        <textarea id="fClaim" placeholder="e.g. '2029: a verified US–China deal is reached.'" required></textarea>
+      </div>
+      <div class="field">
+        <label for="fAssumption">Load-bearing assumption behind this milestone</label>
+        <textarea id="fAssumption" placeholder="What has to be true for this to hold?"></textarea>
+      </div>
+      <div class="field">
+        <label for="fStress">Stress question: how could this fail or be reversed?</label>
+        <textarea id="fStress" placeholder="What would break this milestone, and could the failure be undone?"></textarea>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="fRobust">Your robustness rating</label>
+          <select id="fRobust">
+            <option value="robust">Robust — assumption seems durable</option>
+            <option value="uncertain" selected>Uncertain — plausible either way</option>
+            <option value="fragile">Fragile — assumption looks weak</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fReversible">Is the milestone itself reversible?</label>
+          <select id="fReversible">
+            <option value="yes">Yes — designed to be undone</option>
+            <option value="partial" selected>Partially — some lock-in likely</option>
+            <option value="no">No — effectively irreversible</option>
+          </select>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button type="submit" class="btn btn--primary">Add entry</button>
+        <button type="button" class="btn btn--ghost" id="resetForm">Clear form</button>
+      </div>
+      <p class="status-msg" id="formStatus" role="status" aria-live="polite"></p>
+    </fieldset>
+  </form>
+
+  <div class="toolbar no-print">
+    <button type="button" class="btn btn--ghost" id="exportJson">⭳ Export JSON</button>
+    <button type="button" class="btn btn--ghost" id="exportCsv">⭳ Export CSV</button>
+    <button type="button" class="btn btn--ghost" id="printCanvas">🖨 Print canvas</button>
+    <button type="button" class="btn btn--ghost" id="clearAll">🗑 Clear all entries</button>
+  </div>
+
+  <h2>Your stress-test entries (<span id="entryCount">0</span>)</h2>
+  <div class="table-wrap">
+    <table class="data-table" id="entryTable">
+      <thead>
+        <tr><th>Date</th><th>Source</th><th>Claim</th><th>Assumption</th><th>Stress question</th><th>Robustness</th><th>Reversible?</th><th class="no-print">Actions</th></tr>
+      </thead>
+      <tbody id="entryBody"></tbody>
+    </table>
+  </div>
+  <p class="footnote" id="emptyState">No entries yet — add one above, or explore the seed examples with the button below.</p>
+  <button type="button" class="btn btn--ghost no-print" id="seedExamples">➕ Add two worked examples</button>
+</main>
+
+<footer class="demo-footer">
+  Scenario Scrutiny Canvas · part of <a href="../../index.html">The Human Choice / AI, Power &amp; Dignity Field Guide</a> ·
+  localStorage only, no accounts, no tracking.
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "scenario-scrutiny-canvas-v1";
+
+  function loadEntries() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+  function saveEntries(entries) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(entries)); return true; } catch (e) { return false; }
+  }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function uid() { return "e-" + Math.random().toString(36).slice(2, 9); }
+
+  var entries = loadEntries();
+
+  var badgeClass = { robust: "badge--ok", uncertain: "badge--warn", fragile: "badge--risk" };
+  var robustLabel = { robust: "Robust", uncertain: "Uncertain", fragile: "Fragile" };
+  var reversibleLabel = { yes: "Yes", partial: "Partial", no: "No" };
+  var reversibleBadge = { yes: "badge--ok", partial: "badge--warn", no: "badge--risk" };
+
+  function render() {
+    var tbody = document.getElementById("entryBody");
+    document.getElementById("entryCount").textContent = entries.length;
+    document.getElementById("emptyState").hidden = entries.length > 0;
+    tbody.innerHTML = entries.map(function (e) {
+      return "<tr>" +
+        "<td>" + esc(e.date) + "</td>" +
+        "<td>" + esc(e.source) + "</td>" +
+        "<td>" + esc(e.claim) + "</td>" +
+        "<td>" + esc(e.assumption) + "</td>" +
+        "<td>" + esc(e.stress) + "</td>" +
+        "<td><span class=\"badge " + badgeClass[e.robust] + "\">" + robustLabel[e.robust] + "</span></td>" +
+        "<td><span class=\"badge " + reversibleBadge[e.reversible] + "\">" + reversibleLabel[e.reversible] + "</span></td>" +
+        "<td class=\"no-print row-actions\"><button type=\"button\" class=\"btn btn--ghost\" data-del=\"" + e.id + "\">Delete</button></td>" +
+        "</tr>";
+    }).join("");
+  }
+
+  document.getElementById("entryForm").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var entry = {
+      id: uid(),
+      date: document.getElementById("fDate").value.trim(),
+      source: document.getElementById("fSource").value,
+      claim: document.getElementById("fClaim").value.trim(),
+      assumption: document.getElementById("fAssumption").value.trim(),
+      stress: document.getElementById("fStress").value.trim(),
+      robust: document.getElementById("fRobust").value,
+      reversible: document.getElementById("fReversible").value
+    };
+    if (!entry.date || !entry.claim) {
+      document.getElementById("formStatus").textContent = "Please fill in at least the date and the claim.";
+      return;
+    }
+    entries.push(entry);
+    saveEntries(entries);
+    render();
+    ev.target.reset();
+    document.getElementById("formStatus").textContent = "Entry added and saved to this browser.";
+    window.setTimeout(function () { document.getElementById("formStatus").textContent = ""; }, 3000);
+  });
+
+  document.getElementById("resetForm").addEventListener("click", function () {
+    document.getElementById("entryForm").reset();
+  });
+
+  document.getElementById("entryBody").addEventListener("click", function (ev) {
+    var btn = ev.target.closest("button[data-del]");
+    if (!btn) return;
+    entries = entries.filter(function (e) { return e.id !== btn.dataset.del; });
+    saveEntries(entries);
+    render();
+  });
+
+  document.getElementById("clearAll").addEventListener("click", function () {
+    if (entries.length && !confirm("Delete all " + entries.length + " entries? This cannot be undone.")) return;
+    entries = [];
+    saveEntries(entries);
+    render();
+  });
+
+  document.getElementById("seedExamples").addEventListener("click", function () {
+    entries.push({
+      id: uid(), date: "2029", source: "AI 2040: Plan A",
+      claim: "A verified US–China deal on AI development is reached, including total R&D transparency.",
+      assumption: "Both governments believe verification is technically feasible and politically survivable.",
+      stress: "Domestic political change in either country, or a verification-evading breakthrough, could unwind the deal.",
+      robust: "uncertain", reversible: "partial"
+    });
+    entries.push({
+      id: uid(), date: "\u2248 Sep 2027", source: "AI 2027",
+      claim: "Events fork into a 'race' branch or a 'slowdown' branch amid intense competitive pressure.",
+      assumption: "The authors state their goal is predictive accuracy while acknowledging deep uncertainty; the branch is one of multiple possible futures rather than a settled outcome.",
+      stress: "Real-world variables (talent, compute, diplomacy) may not resemble the scenario's simplified fork at all.",
+      robust: "fragile", reversible: "no"
+    });
+    saveEntries(entries);
+    render();
+  });
+
+  document.getElementById("exportJson").addEventListener("click", function () {
+    var blob = new Blob([JSON.stringify(entries, null, 2)], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "scenario-scrutiny-canvas.json";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  document.getElementById("exportCsv").addEventListener("click", function () {
+    var header = ["Date", "Source", "Claim", "Assumption", "Stress question", "Robustness", "Reversible"];
+    var rows = entries.map(function (e) {
+      return [e.date, e.source, e.claim, e.assumption, e.stress, e.robust, e.reversible].map(function (v) {
+        return '"' + String(v).replace(/"/g, '""') + '"';
+      }).join(",");
+    });
+    var csv = header.join(",") + "\n" + rows.join("\n");
+    var blob = new Blob([csv], { type: "text/csv" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "scenario-scrutiny-canvas.csv";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  document.getElementById("printCanvas").addEventListener("click", function () { window.print(); });
+
+  render();
+})();
+</script>
+</body>
+</html>

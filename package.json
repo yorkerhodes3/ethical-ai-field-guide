@@ -1,0 +1,14 @@
+{
+  "name": "ethical-ai-field-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Source-grounded AI, power, and dignity research dashboard and teaching package",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

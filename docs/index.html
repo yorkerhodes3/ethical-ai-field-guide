@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Human Choice — AI, Power &amp; Dignity Field Guide</title>
+<meta name="description" content="A dependency-free research dashboard synthesizing nine anchor sources on AI, dignity, power, plurality, agency, and reversibility.">
+<meta name="color-scheme" content="light">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:,">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="site-header__bar">
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span class="nav-toggle__icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Toggle navigation</span>
+    </button>
+    <a class="brand" href="#home">
+      <span class="brand__mark" aria-hidden="true">⿻</span>
+      <span class="brand__text">
+        <span class="brand__title">The Human Choice</span>
+        <span class="brand__subtitle">AI, Power &amp; Dignity Field Guide</span>
+      </span>
+    </a>
+    <div class="site-header__tools">
+      <label class="search-field">
+        <span class="visually-hidden">Search the field guide</span>
+        <input type="search" id="globalSearch" placeholder="Search sources, lenses, prompts…" autocomplete="off">
+      </label>
+      <button type="button" id="printBtn" class="btn btn--ghost">🖨 Print</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="site-nav" id="siteNav" aria-label="Primary">
+    <ul>
+      <li><a href="#home">Executive Thesis</a></li>
+      <li><a href="#lenses">DAPPR Lenses</a></li>
+      <li><a href="#sources">Source Explorer</a></li>
+      <li><a href="#matrix">Comparison Matrix</a></li>
+      <li><a href="#timeline">Scenario Timeline</a></li>
+      <li><a href="#course">14-Week Studio Map</a></li>
+      <li><a href="#library">Reading Library</a></li>
+      <li><a href="#audiences">Audience Switcher</a></li>
+      <li><a href="#prompts">Discussion Prompts</a></li>
+      <li><a href="#demos">Demo Lab</a></li>
+      <li><a href="#project-library">Project Library</a></li>
+      <li><a href="#methodology">Methodology &amp; Provenance</a></li>
+    </ul>
+    <p class="site-nav__note">Scenario and recommendation content is clearly labeled and is never presented as fact. See <a href="#methodology">Methodology</a>.</p>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ HERO / EXECUTIVE THESIS ============ -->
+    <section id="home" class="section hero" aria-labelledby="home-heading">
+      <p class="eyebrow">Executive thesis</p>
+      <h1 id="home-heading">The Human Choice</h1>
+      <p class="hero__subtitle">AI, Power &amp; Dignity Field Guide</p>
+      <p class="hero__lede">
+        Nine anchor sources — spanning a public essay, an executive summary, an encyclical, a collaborative book and
+        its public reading interface, a governance movement, and two scenario documents — converge on one question:
+        as AI capability accelerates, who keeps the power to decide, and can that decision still be reversed? This
+        guide reads them side by side through five lenses of our own synthesis —
+        <strong>Dignity, Agency, Plurality, Power, Reversibility (DAPPR)</strong> —
+        without ever treating a scenario or a recommendation as settled fact.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#sources">Explore the sources</a>
+        <a class="btn btn--secondary" href="#lenses">Read the DAPPR lenses</a>
+        <a class="btn btn--secondary" href="#demos">Try the demo lab</a>
+      </div>
+      <div class="hero__stats" role="list">
+        <div class="stat" role="listitem"><span class="stat__num">9</span><span class="stat__label">anchor sources</span></div>
+        <div class="stat" role="listitem"><span class="stat__num">5</span><span class="stat__label">DAPPR lenses</span></div>
+        <div class="stat" role="listitem"><span class="stat__num">14</span><span class="stat__label">course weeks</span></div>
+        <div class="stat" role="listitem"><span class="stat__num">3</span><span class="stat__label">portable demos</span></div>
+      </div>
+      <p class="disclaimer-strip">
+        <strong>Read before you rely on this:</strong> claims are labeled <em>observed&#8209;fact</em>,
+        <em>source&#8209;claim</em>, <em>scenario</em>, <em>recommendation</em>, <em>synthesis</em>, or <em>question</em>.
+        Scenario and recommendation content (e.g. AI 2027, AI 2040: Plan A) describes hypothetical, uncertain futures
+        — dated 2029 / 2035 / 2040 narrative milestones are scenario elements, never facts already decided.
+      </p>
+    </section>
+
+    <!-- ============ DAPPR LENSES ============ -->
+    <section id="lenses" class="section" aria-labelledby="lenses-heading">
+      <p class="eyebrow">Our synthesis — not sourced from any single anchor</p>
+      <h2 id="lenses-heading">Five lenses: DAPPR</h2>
+      <p class="section__intro">Dignity, Agency, Plurality, Power, and Reversibility are this guide's own reading framework for comparing sources. Select a lens to see its definition and the claims that ground it.</p>
+
+      <div class="tabs" id="lensTabs" data-component="tabs">
+        <div class="tabs__list" role="tablist" aria-label="DAPPR lenses" id="lensTabList"></div>
+        <div id="lensPanels" class="tabs__panels"></div>
+      </div>
+
+      <noscript>
+        <ul class="noscript-list">
+          <li><strong>Dignity</strong> — People as ends, not inputs: whether a system treats people as bearers of intrinsic worth throughout its lifecycle.</li>
+          <li><strong>Agency</strong> — The retained capacity to choose: whether people keep a practical ability to question, redirect, or opt out of AI-driven change.</li>
+          <li><strong>Plurality</strong> — Designing for real difference: whether systems represent genuine differences of value rather than one dominant voice.</li>
+          <li><strong>Power</strong> — Who holds the decision rights: who controls frontier AI development, deployment, and correction.</li>
+          <li><strong>Reversibility</strong> — Can we still change course: whether a trajectory preserves the ability to slow down, correct, or undo a decision.</li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- ============ SOURCE EXPLORER ============ -->
+    <section id="sources" class="section" aria-labelledby="sources-heading">
+      <p class="eyebrow">Source explorer</p>
+      <h2 id="sources-heading">The nine anchor sources</h2>
+      <p class="section__intro">Filter by topic, audience, or document type. Every card links directly to its primary source and shows attribution notes where authorship or dates differ from the norm.</p>
+
+      <form class="filter-bar" id="sourceFilters" data-component="source-filters">
+        <div class="filter-group">
+          <span class="filter-group__label" id="topicFilterLabel">Topic</span>
+          <div class="chip-group" role="group" aria-labelledby="topicFilterLabel" id="topicChips"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group__label" id="audienceFilterLabel">Audience</span>
+          <div class="chip-group" role="group" aria-labelledby="audienceFilterLabel" id="audienceChips"></div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-group__label" for="typeFilterSelect">Type</label>
+          <select id="typeFilterSelect">
+            <option value="">All types</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn--ghost" id="clearFilters">Clear filters</button>
+      </form>
+
+      <p class="result-count" id="sourceResultCount" aria-live="polite"></p>
+      <div class="card-grid" id="sourceGrid"></div>
+
+      <noscript>
+        <ul class="noscript-list">
+          <li><strong>Gates, "The turbulent AI era is here"</strong> — Bill Gates, Gates Notes, 26 Aug 2026. <a href="https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med">Read source</a></li>
+          <li><strong>What Is Ethical AI? (executive summary)</strong> — Ethical Tech CoLab; NYU SPS Center for Global Affairs, in collaboration with Microsoft. Institutional authorship; no individual author named. Edition 2026-07. <a href="https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/">Read source</a></li>
+          <li><strong>Magnifica Humanitas</strong> — Pope Leo XIV, The Holy See, signed 15 May 2026. <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html">Read source</a></li>
+          <li><strong>Plurality (GitHub repository)</strong> — E. Glen Weyl, Audrey Tang &amp; the Plurality Community. CC0-1.0. Release manifest 12 Jul 2026, source revision 8615885; the book also circulated in 2024. <a href="https://github.com/pluralitybook/plurality">Read source</a></li>
+          <li><strong>Plurality.net</strong> — Public reading interface for the Plurality book. <a href="https://plurality.net/">Read source</a></li>
+          <li><strong>RadicalxChange</strong> — RadicalxChange Foundation. <a href="https://www.radicalxchange.org/">Read source</a></li>
+          <li><strong>AI 2027</strong> — Daniel Kokotajlo, Eli Lifland, Thomas Larsen, and Romeo Dean, AI Futures Project, published 3 Apr 2025. Predictive scenario. <a href="https://ai-2027.com/">Read source</a></li>
+          <li><strong>AI 2040: Plan A</strong> — Thomas Larsen, Romeo Dean, Brendan Halstead, Eli Lifland, Ryan Greenblatt, and Daniel Kokotajlo, 2026. Recommendation in scenario form. <a href="https://ai-2040.com/">Read source</a></li>
+          <li><strong>AI 2040: Plan A — Reading Group (handout)</strong> — Author unstated; contains a "[DATE]" placeholder rather than a publication date. Publicly shared document. <a href="https://docs.google.com/document/d/1JQRiPaIs8ouB9kUVEs-ht--jgEzxv-ty/edit">Read source</a></li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- ============ COMPARISON MATRIX ============ -->
+    <section id="matrix" class="section" aria-labelledby="matrix-heading">
+      <p class="eyebrow">Cross-source comparison</p>
+      <h2 id="matrix-heading">Comparison matrix</h2>
+      <p class="section__intro">How the nine sources compare on genre/posture, primary problem, human agency, main governor, greatest contribution, and principal blind spot.</p>
+      <div class="table-scroll">
+        <table class="matrix-table" id="matrixTable">
+          <caption class="visually-hidden">Comparison of the nine anchor sources across six dimensions</caption>
+        </table>
+      </div>
+      <noscript>
+        <p class="noscript-list">Interactive matrix requires JavaScript. In summary: Gates (public essay; forecast + recommendation; new transition bodies); What Is Ethical AI? (institutional ethical argument; accountable institutions across the lifecycle); Magnifica Humanitas (encyclical; layered institutions shaped by dignity, common good, subsidiarity, solidarity); Plurality repository (open book/design agenda; open protocols and plural institutions); Plurality.net (publishing interface; makes the open book accessible); RadicalxChange (nonprofit mechanism wiki; participatory mechanisms); AI 2027 (predictive scenario; frontier labs and state executives); AI 2040: Plan A (recommendation in scenario form; US–China deal, consortium, auditors, permit regime); Reading-group handout (facilitation document; structures cruxes, rival plans, failure modes, forecasts).</p>
+      </noscript>
+    </section>
+
+    <!-- ============ SCENARIO TIMELINE ============ -->
+    <section id="timeline" class="section" aria-labelledby="timeline-heading">
+      <p class="eyebrow">Dated + scenario timeline</p>
+      <h2 id="timeline-heading">From published dates to proposed futures</h2>
+      <p class="section__intro">Entries are labeled by epistemic status. Publication, signature, and release events are <em>observed facts</em>; the 2029 / 2035 / 2040 narrative milestones are <em>scenario</em> elements, not events that have occurred or the recommendation itself.</p>
+
+      <div class="chip-group" role="group" aria-label="Filter timeline by label" id="timelineLabelFilter"></div>
+      <ol class="timeline" id="timelineList"></ol>
+      <noscript>
+        <ol class="noscript-list">
+          <li>3 Apr 2025 — AI 2027 published (observed fact).</li>
+          <li>15 May 2026 — Magnifica Humanitas signed (observed fact).</li>
+          <li>12 Jul 2026 — Plurality repository's current release, source revision 8615885 (observed fact).</li>
+          <li>26 Aug 2026 — Gates publishes "The turbulent AI era" (observed fact).</li>
+          <li>≈Sep 2027 — AI 2027's race/slowdown fork (scenario — predictive, not a settled fact).</li>
+          <li>2029 (scenario) — Plan A's narrative: a verified US–China deal (has not occurred).</li>
+          <li>2035 (scenario) — Plan A's narrative: a pause on scaling (has not occurred).</li>
+          <li>2040 (scenario) — Plan A's narrative: a conditional "unpause" (has not occurred).</li>
+          <li>Ongoing — RadicalxChange's plural-voting pilots (source claim).</li>
+        </ol>
+      </noscript>
+    </section>
+
+    <!-- ============ 14-WEEK COURSE STUDIO MAP ============ -->
+    <section id="course" class="section" aria-labelledby="course-heading">
+      <p class="eyebrow">Course studio map</p>
+      <h2 id="course-heading">14-week studio map</h2>
+      <p class="section__intro">Each week links its grounding sources and DAPPR lenses; three weeks anchor a hands-on demo. Works without JavaScript via native expand/collapse.</p>
+      <div class="week-grid" id="weekGrid"></div>
+      <noscript>
+        <ol class="noscript-list">
+          <li>Wk 1: Power before principles</li>
+          <li>Wk 2: What ethics is for</li>
+          <li>Wk 3: Dignity, rights, and the common good (demo: Dignity &amp; Agency Audit)</li>
+          <li>Wk 4: Systems are made ethical by institutions</li>
+          <li>Wk 5: Data, classification, and extraction</li>
+          <li>Wk 6: Humanitarian AI and radical asymmetry</li>
+          <li>Wk 7: Plurality as a theory of technology</li>
+          <li>Wk 8: Voice, mechanism, and agenda power (demo: Plural Voice Lab)</li>
+          <li>Wk 9: Work, distribution, and meaning</li>
+          <li>Wk 10: Truth, attention, and human relationships</li>
+          <li>Wk 11: Forecast literacy and AI 2027 (demo: Scenario Scrutiny Canvas)</li>
+          <li>Wk 12: AI 2040 and scenario scrutiny</li>
+          <li>Wk 13: Multilateral governance and legitimate scale</li>
+          <li>Wk 14: A constitution for human agency</li>
+        </ol>
+      </noscript>
+    </section>
+
+    <!-- ============ READING LIBRARY ============ -->
+    <section id="library" class="section" aria-labelledby="library-heading">
+      <p class="eyebrow">Reading library</p>
+      <h2 id="library-heading">Reading library</h2>
+      <p class="section__intro">Three shelves: the nine primary anchors, the existing Ethical Tech CoLab library (21 publications, supplemental teaching context), and a compact course reading shelf. The full external library is linked prominently below.</p>
+
+      <h3 class="library-subhead">Primary anchor shelf (nine sources)</h3>
+      <div class="library-list" id="libraryList"></div>
+      <noscript>
+        <p class="noscript-list">See the static source list in the Source Explorer section above for all nine anchors with links.</p>
+      </noscript>
+
+      <h3 class="library-subhead">Existing CoLab library: 21 publications</h3>
+      <p class="section__intro">Supplemental teaching context from the Ethical Tech CoLab book shelf — not part of the nine-source comparative corpus. Filter by collection or DAPPR lens.</p>
+      <div class="filter-bar" id="colabFilters">
+        <div class="filter-group">
+          <span class="filter-group__label" id="colabCollectionLabel">Collection</span>
+          <div class="chip-group" role="group" aria-labelledby="colabCollectionLabel" id="colabCollectionChips"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group__label" id="colabLensLabel">DAPPR lens</span>
+          <div class="chip-group" role="group" aria-labelledby="colabLensLabel" id="colabLensChips"></div>
+        </div>
+        <button type="button" class="btn btn--ghost" id="clearColabFilters">Clear library filters</button>
+      </div>
+      <p class="result-count" id="colabResultCount" aria-live="polite"></p>
+      <div class="colab-grid" id="colabGrid"></div>
+      <p class="footnote"><a id="colabCatalogLink" href="https://yorkerhodes3.github.io/pageturn-book/shelf/" target="_blank" rel="noopener">Open the full public 21-book shelf ↗</a></p>
+      <noscript>
+        <p class="noscript-list">See the full 21-book shelf at <a href="https://yorkerhodes3.github.io/pageturn-book/shelf/">yorkerhodes3.github.io/pageturn-book/shelf</a> (supplemental; not part of the nine-source corpus).</p>
+      </noscript>
+
+      <h3 class="library-subhead">Course reading shelf</h3>
+      <p class="section__intro">
+        A compact shelf of twelve verified titles from the full external reading library.
+        <a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/course/reading-library.md" id="fullLibraryLink" target="_blank" rel="noopener">Open the full reading library on GitHub ↗</a>
+      </p>
+      <div class="shelf-list" id="courseShelfList"></div>
+      <noscript>
+        <ul class="noscript-list">
+          <li>Atlas of AI — Kate Crawford (2021)</li>
+          <li>Power and Progress — Daron Acemoglu and Simon Johnson (2023)</li>
+          <li>Data Feminism — Catherine D'Ignazio and Lauren F. Klein (2020)</li>
+          <li>Design Justice — Sasha Costanza-Chock (2020)</li>
+          <li>Justice by Means of Democracy — Danielle Allen (2023)</li>
+          <li>Human Compatible — Stuart Russell (2019)</li>
+          <li>The Alignment Problem — Brian Christian (2020)</li>
+          <li>AI Ethics — Mark Coeckelbergh (2020)</li>
+          <li>Technology and the Virtues — Shannon Vallor (2016)</li>
+          <li>AI Snake Oil — Arvind Narayanan and Sayash Kapoor (2024)</li>
+          <li>Automating Inequality — Virginia Eubanks (2018)</li>
+          <li>Unmasking AI — Joy Buolamwini (2023)</li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- ============ AUDIENCE SWITCHER ============ -->
+    <section id="audiences" class="section" aria-labelledby="audiences-heading">
+      <p class="eyebrow">Audience framing (our synthesis)</p>
+      <h2 id="audiences-heading">Audience switcher</h2>
+      <p class="section__intro">The same evidence, reframed for three audiences. Switch tabs to change emphasis.</p>
+      <div class="tabs" id="audienceTabs" data-component="tabs">
+        <div class="tabs__list" role="tablist" aria-label="Audience" id="audienceTabList"></div>
+        <div id="audiencePanels" class="tabs__panels"></div>
+      </div>
+      <noscript>
+        <ul class="noscript-list">
+          <li><strong>AI-2040</strong> — Scenario planners &amp; forecasters: prioritize the timeline, matrix, and tracked forecasts. Full brief: events/ai-2040-reading-group.md.</li>
+          <li><strong>Salon</strong> — Public discussion audience: prioritize DAPPR lenses broadly and the prompt deck. Full brief: events/salon-discussion-kit.md.</li>
+          <li><strong>UNGA</strong> — Policy &amp; diplomatic audience: prioritize Power, Reversibility, and the comparison matrix. Full brief: events/unga-human-dignity-brief.md.</li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- ============ DISCUSSION PROMPT DECK ============ -->
+    <section id="prompts" class="section" aria-labelledby="prompts-heading">
+      <p class="eyebrow">Discussion prompt deck</p>
+      <h2 id="prompts-heading">Discussion prompts</h2>
+      <p class="section__intro">Eleven open questions tied to lenses and sources. Use the shuffle control to reorder for seminar use.</p>
+      <button type="button" class="btn btn--ghost" id="shufflePrompts">🔀 Shuffle</button>
+      <ul class="prompt-deck" id="promptDeck"></ul>
+      <noscript>
+        <ul class="noscript-list">
+          <li>Where would a genuine "human rights floor" for AI use actually bind in your institution?</li>
+          <li>What would credible transition planning for job displacement look like in your sector?</li>
+          <li>Where could plural or quadratic voting improve a majority-vote decision your community makes?</li>
+          <li>What would make a 2035 pause on scaling credible and verifiable, rather than symbolic?</li>
+          <li>Of the handout's rival plans to Plan A, which best preserves reversibility if wrong?</li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- ============ DEMO LAB ============ -->
+    <section id="demos" class="section" aria-labelledby="demos-heading">
+      <p class="eyebrow">Demo lab</p>
+      <h2 id="demos-heading">Three standalone demos</h2>
+      <p class="section__intro">Each demo is independently portable (copy the folder anywhere) and stores data only in your browser's localStorage. Each links back here.</p>
+      <div class="demo-grid">
+        <article class="demo-card">
+          <h3>Scenario Scrutiny Canvas</h3>
+          <p>A fillable, exportable, dated policy stress-test for scenario claims like AI 2027 and AI 2040: Plan A.</p>
+          <p class="footnote">Grounding sources: <a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a> · <a href="https://ai-2040.com/" target="_blank" rel="noopener">AI 2040: Plan A</a></p>
+          <a class="btn btn--primary" href="demos/scenario-scrutiny/index.html">Open demo →</a>
+        </article>
+        <article class="demo-card">
+          <h3>Plural Voice Lab</h3>
+          <p>An illustrative voice-credit / quadratic voting allocation simulator inspired by RadicalxChange and Plurality.</p>
+          <p class="footnote">Grounding sources: <a href="https://www.radicalxchange.org/" target="_blank" rel="noopener">RadicalxChange</a> · <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">Plurality (repo)</a> · <a href="https://plurality.net/" target="_blank" rel="noopener">Plurality.net</a></p>
+          <a class="btn btn--primary" href="demos/plural-voice-lab/index.html">Open demo →</a>
+        </article>
+        <article class="demo-card">
+          <h3>Dignity &amp; Agency Audit</h3>
+          <p>An interactive DAPPR checklist with printable results — not a legal or compliance certification.</p>
+          <p class="footnote">Grounding sources: <a href="https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/" target="_blank" rel="noopener">What Is Ethical AI?</a> · <a href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html" target="_blank" rel="noopener">Magnifica Humanitas</a></p>
+          <a class="btn btn--primary" href="demos/dignity-agency-audit/index.html">Open demo →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECT LIBRARY ============ -->
+    <section id="project-library" class="section" aria-labelledby="project-library-heading">
+      <p class="eyebrow">Beyond the dashboard</p>
+      <h2 id="project-library-heading">Project library</h2>
+      <p class="section__intro">The finished portable package goes deeper than this dashboard. These are normal links to public documents in the project's GitHub repository (not part of this static site).</p>
+      <div class="project-library-list" id="projectLibraryList"></div>
+      <noscript>
+        <ul class="noscript-list">
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/EXECUTIVE-BRIEF.md" target="_blank" rel="noopener">Executive brief</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/research/consolidated-point-of-view.md" target="_blank" rel="noopener">Consolidated point of view</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/research/comparison-matrix.md" target="_blank" rel="noopener">Comparison matrix (extended)</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/course/semester-studio.md" target="_blank" rel="noopener">14-week semester studio (full)</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/course/colab-library-alignment.md" target="_blank" rel="noopener">CoLab library alignment</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/course/reading-library.md" target="_blank" rel="noopener">Reading library (full)</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/events/ai-2040-reading-group.md" target="_blank" rel="noopener">AI-2040 meeting brief</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/events/salon-discussion-kit.md" target="_blank" rel="noopener">Salon discussion kit</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/events/unga-human-dignity-brief.md" target="_blank" rel="noopener">UNGA human dignity brief</a></li>
+          <li><a href="https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/research/citation-ledger.md" target="_blank" rel="noopener">Citation &amp; provenance ledger</a></li>
+        </ul>
+      </noscript>
+    </section>
+
+    <!-- ============ METHODOLOGY / PROVENANCE ============ -->
+    <section id="methodology" class="section" aria-labelledby="methodology-heading">
+      <p class="eyebrow">Methodology &amp; provenance</p>
+      <h2 id="methodology-heading">Methodology &amp; provenance</h2>
+      <div id="methodologyBody"></div>
+      <noscript>
+        <div class="noscript-list">
+          <p><strong>Purpose:</strong> synthesizes nine named anchor sources; the 21-book CoLab library and course reading shelf are supplemental, not part of the nine-source corpus.</p>
+          <p><strong>Retrieval:</strong> primary pages retrieved with the Tavily Extract API on 2026-08-30; Tavily Search used only for discovery/counterpoint; raw third-party pages are not redistributed.</p>
+          <p><strong>Epistemic labels:</strong> observed-fact, source-claim, scenario (never a prediction of fact or an occurred event), recommendation, synthesis (this guide's own framing, e.g. DAPPR), question.</p>
+          <p><strong>DAPPR is our synthesis</strong> — not proposed by name in any anchor source.</p>
+          <p><strong>All nine sources link directly.</strong> Two carry attribution notes: "What Is Ethical AI?" has institutional, not individual, authorship; the reading-group handout does not state an author or date.</p>
+          <p><strong>Scenario discipline:</strong> AI 2027 and AI 2040: Plan A are never treated as settled predictions; Plan A's 2029/2035/2040 milestones are scenario elements, not occurred events.</p>
+        </div>
+      </noscript>
+      <p class="footnote">
+        Full seed data lives in <code>assets/content.js</code>. Every claim object carries <code>sourceIds</code> and a
+        <code>label</code> field; the nine-source comparative corpus is listed in the
+        <a href="#sources">Source Explorer</a>. Deeper analysis, per-source briefs, and event materials live in the
+        <a href="#project-library">Project Library</a>.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>Built as a static, dependency-free GitHub Pages site. No external fonts, frameworks, or trackers. &copy; The Human Choice Field Guide.</p>
+</footer>
+
+<script src="assets/content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "The Human Choice: AI, Power & Dignity Field Guide",
+  "accessedAt": "2026-08-30",
+  "retrieval": {
+    "primary": "Tavily Extract API",
+    "extractDepth": "advanced",
+    "format": "markdown",
+    "discovery": "Tavily Search API",
+    "note": "Raw third-party page extractions are not redistributed."
+  },
+  "sources": [
+    {
+      "id": "gates-turbulent-ai-era",
+      "title": "The turbulent AI era is here. The choices we make now are critical.",
+      "author": "Bill Gates",
+      "publisher": "Gates Notes",
+      "publishedAt": "2026-08-26",
+      "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med",
+      "genre": "public policy essay",
+      "primaryEpistemicTypes": [
+        "source claim",
+        "forecast",
+        "recommendation"
+      ],
+      "brief": "../research/source-briefs/01-gates-turbulent-ai-era.md"
+    },
+    {
+      "id": "what-is-ethical-ai",
+      "title": "What Is Ethical AI? - Executive Summary",
+      "author": "Ethical Tech CoLab; NYU School of Professional Studies Center for Global Affairs, in collaboration with Microsoft",
+      "authorNote": "Canonical publication metadata gives institutional authorship; no individual author is named.",
+      "edition": "2026-07",
+      "url": "https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/",
+      "genre": "book executive summary",
+      "primaryEpistemicTypes": [
+        "normative argument",
+        "source claim",
+        "recommendation"
+      ],
+      "brief": "../research/source-briefs/02-what-is-ethical-ai.md"
+    },
+    {
+      "id": "magnifica-humanitas",
+      "title": "Magnifica Humanitas",
+      "subtitle": "On Safeguarding the Human Person in the Time of Artificial Intelligence",
+      "author": "Pope Leo XIV",
+      "signedAt": "2026-05-15",
+      "url": "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+      "genre": "encyclical",
+      "primaryEpistemicTypes": [
+        "theological claim",
+        "normative argument",
+        "recommendation"
+      ],
+      "brief": "../research/source-briefs/03-magnifica-humanitas.md"
+    },
+    {
+      "id": "plurality-repository",
+      "title": "Plurality: The Future of Collaborative Technology and Democracy",
+      "author": "E. Glen Weyl, Audrey Tang, and the Plurality Community",
+      "releaseDate": "2026-07-12",
+      "releaseNote": "Current repository release; the book also circulated in 2024.",
+      "sourceRevision": "86158859464aee75633acd854c656928121a7fd8",
+      "url": "https://github.com/pluralitybook/plurality",
+      "license": "CC0-1.0",
+      "genre": "open collaborative book and governance repository",
+      "primaryEpistemicTypes": [
+        "normative argument",
+        "source claim",
+        "recommendation",
+        "observed implementation"
+      ],
+      "brief": "../research/source-briefs/04-plurality-book-and-repository.md"
+    },
+    {
+      "id": "radicalxchange",
+      "title": "RadicalxChange",
+      "author": "RadicalxChange Foundation",
+      "url": "https://www.radicalxchange.org/",
+      "genre": "nonprofit website, mechanism library, and project portfolio",
+      "primaryEpistemicTypes": [
+        "organizational position",
+        "mechanism proposal",
+        "observed implementation"
+      ],
+      "brief": "../research/source-briefs/05-radicalxchange.md"
+    },
+    {
+      "id": "plurality-site",
+      "title": "Plurality.net",
+      "author": "Plurality book project",
+      "url": "https://plurality.net/",
+      "genre": "public reading and distribution interface",
+      "primaryEpistemicTypes": [
+        "organizational position",
+        "publication metadata"
+      ],
+      "brief": "../research/source-briefs/06-plurality-dot-net.md"
+    },
+    {
+      "id": "ai-2027",
+      "title": "AI 2027",
+      "author": "Daniel Kokotajlo, Eli Lifland, Thomas Larsen, and Romeo Dean",
+      "publishedAt": "2025-04-03",
+      "url": "https://ai-2027.com/",
+      "genre": "predictive scenario",
+      "primaryEpistemicTypes": [
+        "scenario",
+        "forecast",
+        "source claim"
+      ],
+      "brief": "../research/source-briefs/07-ai-2027.md"
+    },
+    {
+      "id": "ai-2040-plan-a",
+      "title": "AI 2040: Plan A",
+      "author": "Thomas Larsen, Romeo Dean, Brendan Halstead, Eli Lifland, Ryan Greenblatt, and Daniel Kokotajlo",
+      "publishedAt": "2026",
+      "url": "https://ai-2040.com/",
+      "genre": "recommendation in scenario form",
+      "primaryEpistemicTypes": [
+        "recommendation",
+        "scenario",
+        "conditional prediction"
+      ],
+      "brief": "../research/source-briefs/08-ai-2040-plan-a.md"
+    },
+    {
+      "id": "ai-2040-reading-group-handout",
+      "title": "AI 2040: Plan A - Reading Group",
+      "author": null,
+      "authorNote": "The public document does not state an author.",
+      "publishedAt": null,
+      "dateNote": "The document contains a [DATE] placeholder.",
+      "url": "https://docs.google.com/document/d/1JQRiPaIs8ouB9kUVEs-ht--jgEzxv-ty/edit",
+      "genre": "event handout",
+      "primaryEpistemicTypes": [
+        "source summary",
+        "question",
+        "forecast prompt"
+      ],
+      "brief": "../research/source-briefs/09-ai-2040-reading-group-handout.md"
+    }
+  ]
+}

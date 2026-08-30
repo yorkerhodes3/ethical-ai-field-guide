@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plural Voice Lab — The Human Choice Field Guide</title>
+<meta name="description" content="An illustrative voice-credit / quadratic voting allocation simulator inspired by RadicalxChange and Plurality. Educational only.">
+<link rel="icon" href="data:,">
+<style>
+:root {
+  --paper:#f4ecdc; --paper-raised:#fbf5e8; --paper-deep:#ece0c8; --ink:#241c14; --ink-soft:#4a3d2c; --ink-faint:#7a6b52;
+  --rule:#cdbb96; --rule-soft:#e3d5b3; --accent:#8a2e2e; --accent-soft:#f0dcd1; --accent-2:#2f5233; --accent-2-soft:#dee8dc;
+  --accent-3:#1f3a5f; --accent-3-soft:#dbe3ee; --gold:#a9781f; --gold-soft:#f2e3bd; --radius:3px;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.6;font-size:1.02rem;}
+.demo-header{background:var(--paper-raised);border-bottom:3px double var(--rule);padding:0.9rem 1.2rem;display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;justify-content:space-between;}
+.demo-header a.back-link{font-family:var(--sans);font-weight:700;font-size:0.85rem;text-decoration:none;color:var(--accent);}
+.demo-header a.back-link:hover{color:var(--ink);}
+.demo-title{font-family:var(--sans);font-size:0.95rem;font-weight:700;color:var(--ink-soft);}
+main.demo-main{max-width:60rem;margin:0 auto;padding:2rem 1.2rem 4rem;}
+h1,h2,h3{font-family:var(--serif);}
+.demo-disclaimer{font-family:var(--sans);font-size:0.86rem;background:var(--gold-soft);border-left:4px solid var(--gold);padding:0.9rem 1.1rem;border-radius:var(--radius);margin:1rem 0 1.6rem;color:var(--ink-soft);}
+.btn{font-family:var(--sans);display:inline-block;text-decoration:none;cursor:pointer;padding:0.55rem 1.05rem;border-radius:var(--radius);font-size:0.9rem;font-weight:600;border:1px solid transparent;line-height:1.3;}
+.btn--primary{background:var(--accent);color:var(--paper-raised);border-color:var(--accent);}
+.btn--primary:hover{background:#6f2323;color:#fff;}
+.btn--ghost{background:var(--paper-deep);color:var(--ink-soft);border-color:var(--rule);}
+.btn--ghost:hover{background:var(--rule-soft);color:var(--ink);}
+.btn[disabled]{opacity:0.5;cursor:not-allowed;}
+label{font-family:var(--sans);font-weight:600;font-size:0.88rem;display:block;margin-bottom:0.3rem;}
+input[type="text"],input[type="number"],select{font-family:var(--sans);border:1px solid var(--rule);background:var(--paper-raised);color:var(--ink);padding:0.5rem 0.6rem;border-radius:var(--radius);width:100%;}
+fieldset{border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.2rem;margin:0 0 1.2rem;}
+legend{font-family:var(--sans);font-weight:700;padding:0 0.4rem;color:var(--accent-3);}
+.field{margin-bottom:1rem;}
+.field-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1rem;}
+.card{background:var(--paper-raised);border:1px solid var(--rule);border-radius:var(--radius);padding:1rem 1.2rem;margin-bottom:1rem;}
+.status-msg{font-family:var(--sans);font-size:0.85rem;color:var(--accent-2);min-height:1.2em;}
+.toolbar{display:flex;flex-wrap:wrap;gap:0.6rem;margin:1rem 0;}
+table.data-table{width:100%;border-collapse:collapse;margin:1rem 0;}
+table.data-table th,table.data-table td{border:1px solid var(--rule-soft);padding:0.5rem 0.7rem;text-align:left;vertical-align:middle;}
+table.data-table th{background:var(--paper-deep);font-family:var(--sans);font-size:0.8rem;text-transform:uppercase;}
+.badge{font-family:var(--sans);font-size:0.68rem;text-transform:uppercase;padding:0.15rem 0.5rem;border-radius:999px;font-weight:700;}
+.badge--ok{background:var(--accent-2-soft);color:var(--accent-2);}
+.badge--warn{background:var(--gold-soft);color:var(--gold);}
+.badge--risk{background:var(--accent-soft);color:var(--accent);}
+.footnote{font-family:var(--sans);font-size:0.8rem;color:var(--ink-faint);}
+:focus-visible{outline:3px solid var(--accent-3);outline-offset:2px;}
+.demo-footer{text-align:center;font-family:var(--sans);font-size:0.8rem;color:var(--ink-faint);padding:2rem 1rem 3rem;border-top:1px solid var(--rule-soft);}
+.credit-bar{height:0.9rem;border-radius:999px;background:var(--paper-deep);overflow:hidden;border:1px solid var(--rule);}
+.credit-bar__fill{height:100%;background:var(--accent-3);}
+.credit-bar__fill.is-over{background:var(--accent);}
+.voice-row{display:grid;grid-template-columns:1fr 8rem 6rem;gap:0.8rem;align-items:center;padding:0.5rem 0;border-bottom:1px solid var(--rule-soft);}
+.voice-row__name{font-weight:700;}
+.voice-row input[type="range"]{width:100%;}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:0.8rem;margin:1rem 0;}
+@media print{.demo-header,.toolbar,.btn,.no-print{display:none !important;}body{background:#fff;color:#000;}}
+</style>
+</head>
+<body>
+<header class="demo-header">
+  <a class="back-link" href="../../index.html#demos">← Back to Field Guide dashboard</a>
+  <span class="demo-title">Demo 2 of 3 · Plural Voice Lab</span>
+</header>
+
+<main class="demo-main">
+  <h1>Plural Voice Lab</h1>
+  <p class="footnote">Independently portable: single self-contained HTML file. Data saved only in this browser's localStorage.</p>
+
+  <div class="demo-disclaimer">
+    <strong>What this is:</strong> an illustrative voice-credit / quadratic-voting allocation simulator, loosely
+    inspired by RadicalxChange's real-world pilots and Plurality's argument for collaborative technology across
+    difference. <strong>What this is not:</strong> a validated voting system, a legal mechanism, or a claim that
+    quadratic voting solves collective decision-making in general — real deployments depend heavily on how identity,
+    eligibility, and agenda-setting (what's on the ballot at all) are designed, choices this toy does not make for you.
+    Sources: <a href="https://www.radicalxchange.org/" target="_blank" rel="noopener">RadicalxChange</a> ·
+    <a href="https://github.com/pluralitybook/plurality" target="_blank" rel="noopener">Plurality repository</a> ·
+    <a href="https://plurality.net/" target="_blank" rel="noopener">Plurality.net</a>.
+  </div>
+
+  <fieldset>
+    <legend>1. Set up your options and voice-credit budget</legend>
+    <div class="field-row">
+      <div class="field">
+        <label for="fBudget">Voice credits per participant</label>
+        <input type="number" id="fBudget" min="1" max="1000" value="100">
+      </div>
+      <div class="field">
+        <label for="fOptionName">Add an option / proposal</label>
+        <input type="text" id="fOptionName" placeholder="e.g. Fund a community broadband pilot">
+      </div>
+    </div>
+    <div class="toolbar">
+      <button type="button" class="btn btn--primary" id="addOption">Add option</button>
+      <button type="button" class="btn btn--ghost" id="loadSample">Load sample scenario</button>
+      <button type="button" class="btn btn--ghost" id="resetAll">Reset lab</button>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>2. Allocate your voice credits (quadratic cost)</legend>
+    <p class="footnote">Under quadratic voting, casting <em>n</em> votes for an option costs n² credits — expressing
+    strong preference intensity costs progressively more, which is the mechanism's core design idea.</p>
+    <div id="voiceRows"></div>
+    <p class="footnote">Credits used: <strong id="creditsUsed">0</strong> / <span id="creditsBudget">100</span></p>
+    <div class="credit-bar"><div class="credit-bar__fill" id="creditFill" style="width:0%"></div></div>
+    <p class="status-msg" id="allocStatus" role="status" aria-live="polite"></p>
+  </fieldset>
+
+  <fieldset>
+    <legend>3. Results (this session's allocation only)</legend>
+    <div class="table-wrap">
+      <table class="data-table" id="resultsTable">
+        <thead><tr><th>Option</th><th>Votes cast</th><th>Credits spent</th><th>Share of total votes</th></tr></thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </div>
+    <p class="footnote" id="noOptions">Add at least one option above to begin.</p>
+  </fieldset>
+
+  <div class="toolbar no-print">
+    <button type="button" class="btn btn--ghost" id="exportJson">⭳ Export JSON</button>
+    <button type="button" class="btn btn--ghost" id="printResults">🖨 Print results</button>
+  </div>
+
+  <details class="card">
+    <summary><strong>Why quadratic cost, in one paragraph</strong></summary>
+    <p>Flat one-person-one-vote systems can't distinguish mild preference from intense preference. Simple summed
+    scoring lets a single participant dominate by pouring unlimited weight into one option. Quadratic pricing sits
+    between the two: it lets people signal intensity while making it progressively expensive to dominate a single
+    outcome, which is the mechanism RadicalxChange has piloted in participatory-budgeting settings.</p>
+  </details>
+</main>
+
+<footer class="demo-footer">
+  Plural Voice Lab · part of <a href="../../index.html">The Human Choice / AI, Power &amp; Dignity Field Guide</a> ·
+  localStorage only, no accounts, no tracking.
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var STORAGE_KEY = "plural-voice-lab-v1";
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  function save(state) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+  }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function uid() { return "o-" + Math.random().toString(36).slice(2, 9); }
+
+  var state = load() || { budget: 100, options: [] };
+
+  function creditsUsed() {
+    return state.options.reduce(function (sum, o) { return sum + (o.votes * o.votes); }, 0);
+  }
+
+  function renderVoiceRows() {
+    var wrap = document.getElementById("voiceRows");
+    if (!state.options.length) {
+      wrap.innerHTML = '<p class="footnote">No options yet — add one above.</p>';
+    } else {
+      wrap.innerHTML = state.options.map(function (o) {
+        var cost = o.votes * o.votes;
+        return '<div class="voice-row">' +
+          '<span class="voice-row__name">' + esc(o.name) + '</span>' +
+          '<input type="range" min="0" max="20" value="' + o.votes + '" data-id="' + o.id + '" aria-label="Votes for ' + esc(o.name) + '">' +
+          '<span data-readout="' + o.id + '">' + o.votes + ' votes (' + cost + ' cr)</span>' +
+          '</div>';
+      }).join("");
+    }
+    renderCreditsSummary();
+  }
+
+  function renderCreditsSummary() {
+    document.getElementById("creditsBudget").textContent = state.budget;
+    var used = creditsUsed();
+    document.getElementById("creditsUsed").textContent = used;
+    var pct = Math.min(100, (used / state.budget) * 100);
+    var fill = document.getElementById("creditFill");
+    fill.style.width = pct + "%";
+    fill.classList.toggle("is-over", used > state.budget);
+    var status = document.getElementById("allocStatus");
+    status.textContent = used > state.budget
+      ? "Over budget by " + (used - state.budget) + " credits — reduce some allocations."
+      : "";
+  }
+
+  function renderResults() {
+    var tbody = document.getElementById("resultsBody");
+    var totalVotes = state.options.reduce(function (s, o) { return s + o.votes; }, 0);
+    document.getElementById("noOptions").hidden = state.options.length > 0;
+    tbody.innerHTML = state.options.map(function (o) {
+      var share = totalVotes > 0 ? Math.round((o.votes / totalVotes) * 1000) / 10 : 0;
+      return "<tr><td>" + esc(o.name) + "</td><td>" + o.votes + "</td><td>" + (o.votes * o.votes) +
+        "</td><td>" + share + "%</td></tr>";
+    }).join("");
+  }
+
+  // Lightweight update used while dragging/adjusting a slider: updates only the
+  // readout text next to the moved slider, plus the aggregate summary and results
+  // table, WITHOUT rebuilding the slider elements themselves (which would drop
+  // keyboard focus mid-interaction).
+  function updateAfterVote(optionId) {
+    var opt = state.options.filter(function (o) { return o.id === optionId; })[0];
+    if (opt) {
+      var readout = document.querySelector('[data-readout="' + optionId + '"]');
+      if (readout) readout.textContent = opt.votes + " votes (" + (opt.votes * opt.votes) + " cr)";
+    }
+    renderCreditsSummary();
+    renderResults();
+    save(state);
+  }
+
+  function renderAll() {
+    document.getElementById("fBudget").value = state.budget;
+    renderVoiceRows();
+    renderResults();
+    save(state);
+  }
+
+  document.getElementById("fBudget").addEventListener("change", function (e) {
+    var v = parseInt(e.target.value, 10);
+    state.budget = isNaN(v) || v < 1 ? 100 : v;
+    renderAll();
+  });
+
+  document.getElementById("addOption").addEventListener("click", function () {
+    var input = document.getElementById("fOptionName");
+    var name = input.value.trim();
+    if (!name) return;
+    state.options.push({ id: uid(), name: name, votes: 0 });
+    input.value = "";
+    renderAll();
+  });
+
+  document.getElementById("voiceRows").addEventListener("input", function (e) {
+    if (e.target.tagName !== "INPUT") return;
+    var opt = state.options.filter(function (o) { return o.id === e.target.dataset.id; })[0];
+    if (!opt) return;
+    opt.votes = parseInt(e.target.value, 10) || 0;
+    updateAfterVote(opt.id);
+  });
+
+  document.getElementById("loadSample").addEventListener("click", function () {
+    state = {
+      budget: 100,
+      options: [
+        { id: uid(), name: "Fund a community broadband pilot", votes: 0 },
+        { id: uid(), name: "Subsidize local retraining programs", votes: 0 },
+        { id: uid(), name: "Create a citizen AI-oversight panel", votes: 0 },
+        { id: uid(), name: "Do nothing / status quo", votes: 0 }
+      ]
+    };
+    renderAll();
+  });
+
+  document.getElementById("resetAll").addEventListener("click", function () {
+    if (state.options.length && !confirm("Reset the lab? This clears all options and votes.")) return;
+    state = { budget: 100, options: [] };
+    renderAll();
+  });
+
+  document.getElementById("exportJson").addEventListener("click", function () {
+    var blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "plural-voice-lab.json";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+
+  document.getElementById("printResults").addEventListener("click", function () { window.print(); });
+
+  renderAll();
+})();
+</script>
+</body>
+</html>

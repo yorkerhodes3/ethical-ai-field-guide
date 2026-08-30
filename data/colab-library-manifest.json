@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalog": "Ethical Tech CoLab Book Reader production shelf",
+  "catalogUrl": "https://yorkerhodes3.github.io/pageturn-book/shelf/",
+  "sourceRepository": "https://github.com/yorkerhodes3/pageturn-book",
+  "sourceRevision": "b456e8e137a0b6ce9a51799b71c6091f5241b5d7",
+  "accessedAt": "2026-08-30",
+  "readerBaseUrl": "https://yorkerhodes3.github.io/pageturn-book/legacy/",
+  "publications": [
+    {
+      "slug": "what-is-ethical-ai",
+      "title": "What Is Ethical AI?",
+      "collection": "Foundational & Policy",
+      "pageCount": 46,
+      "recommendedWeeks": [1, 2, 3, 4, 6, 13, 14],
+      "dappr": ["dignity", "agency", "plurality", "power", "reversibility"]
+    },
+    {
+      "slug": "ai-carbon-footprint",
+      "title": "AI's Carbon Footprint",
+      "collection": "Foundational & Policy",
+      "pageCount": 18,
+      "recommendedWeeks": [5, 13],
+      "dappr": ["dignity", "power", "reversibility"]
+    },
+    {
+      "slug": "ai-models-research",
+      "title": "AI Model Performance",
+      "shelfTitle": "AI Models Research",
+      "collection": "Foundational & Policy",
+      "pageCount": 19,
+      "recommendedWeeks": [4, 5],
+      "dappr": ["power", "reversibility"]
+    },
+    {
+      "slug": "erus",
+      "title": "The Evacuation Readiness and Uncertainty Simulator",
+      "collection": "Foundational & Policy",
+      "pageCount": 24,
+      "recommendedWeeks": [6, 11],
+      "dappr": ["dignity", "agency", "reversibility"]
+    },
+    {
+      "slug": "cerai",
+      "title": "The Civilian Evacuation Risk Anticipation Index",
+      "collection": "Foundational & Policy",
+      "pageCount": 13,
+      "recommendedWeeks": [4, 6],
+      "dappr": ["dignity", "agency", "power"]
+    },
+    {
+      "slug": "agentic-language-development",
+      "title": "Agentic Language Development",
+      "collection": "Foundational & Policy",
+      "pageCount": 25,
+      "recommendedWeeks": [4, 11],
+      "dappr": ["agency", "power", "reversibility"]
+    },
+    {
+      "slug": "war-games",
+      "title": "The Only Winning Move",
+      "shelfTitle": "War Games",
+      "collection": "Foundational & Policy",
+      "pageCount": 15,
+      "recommendedWeeks": [4, 11, 12],
+      "dappr": ["agency", "power", "reversibility"]
+    },
+    {
+      "slug": "after-the-corridor",
+      "title": "After the Corridor",
+      "collection": "Humanitarian Systems",
+      "pageCount": 22,
+      "recommendedWeeks": [6, 13, 14],
+      "dappr": ["dignity", "agency", "power", "reversibility"]
+    },
+    {
+      "slug": "ercf",
+      "title": "The Evacuation Risk and Cost Framework",
+      "collection": "Humanitarian Systems",
+      "pageCount": 32,
+      "recommendedWeeks": [6, 9],
+      "dappr": ["dignity", "power", "reversibility"]
+    },
+    {
+      "slug": "evacuation-inform-index",
+      "title": "The Evacuation Inform Index",
+      "collection": "Humanitarian Systems",
+      "pageCount": 11,
+      "recommendedWeeks": [6],
+      "dappr": ["dignity", "agency", "reversibility"]
+    },
+    {
+      "slug": "evacuation-simulation",
+      "title": "The Evacuation Simulator",
+      "collection": "Humanitarian Systems",
+      "pageCount": 22,
+      "recommendedWeeks": [6, 7],
+      "dappr": ["agency", "plurality", "power"]
+    },
+    {
+      "slug": "haste",
+      "title": "HASTE: High-speed Assessment and Satellite Tracking for Emergencies",
+      "collection": "Humanitarian Systems",
+      "pageCount": 26,
+      "recommendedWeeks": [4, 5, 6],
+      "dappr": ["dignity", "power", "reversibility"]
+    },
+    {
+      "slug": "mariupol-severity-model",
+      "title": "The Mariupol Corridor Severity Model",
+      "collection": "Humanitarian Systems",
+      "pageCount": 26,
+      "recommendedWeeks": [6],
+      "dappr": ["dignity", "power"]
+    },
+    {
+      "slug": "forced-labor-structural-risk-index",
+      "title": "The Forced Labor Structural Risk Index",
+      "collection": "Humanitarian Systems",
+      "pageCount": 25,
+      "recommendedWeeks": [5, 6, 13],
+      "dappr": ["dignity", "agency", "power"]
+    },
+    {
+      "slug": "agentic-behavior-observatory",
+      "title": "The Agentic Behavior Observatory",
+      "collection": "Research & Public Tools",
+      "pageCount": 12,
+      "recommendedWeeks": [4, 11],
+      "dappr": ["dignity", "plurality", "power"]
+    },
+    {
+      "slug": "ai-research-assistant",
+      "title": "AI-Powered Research Questions",
+      "shelfTitle": "AI Research Assistant",
+      "collection": "Research & Public Tools",
+      "pageCount": 10,
+      "recommendedWeeks": [2, 10, 11],
+      "dappr": ["agency", "power"]
+    },
+    {
+      "slug": "cyber-dictionary",
+      "title": "Cyber Dictionary",
+      "collection": "Research & Public Tools",
+      "pageCount": 44,
+      "recommendedWeeks": [1, 12],
+      "dappr": ["agency", "power"]
+    },
+    {
+      "slug": "digital-provenance-passport",
+      "title": "The Digital Provenance Passport",
+      "collection": "Research & Public Tools",
+      "pageCount": 28,
+      "recommendedWeeks": [4, 5],
+      "dappr": ["agency", "power", "reversibility"]
+    },
+    {
+      "slug": "diplomatic-simulator",
+      "title": "The Diplomatic Simulator",
+      "collection": "Research & Public Tools",
+      "pageCount": 23,
+      "recommendedWeeks": [11, 12, 13],
+      "dappr": ["plurality", "power", "reversibility"]
+    },
+    {
+      "slug": "provenance-search",
+      "title": "Provenance Search",
+      "collection": "Research & Public Tools",
+      "pageCount": 20,
+      "recommendedWeeks": [4, 5],
+      "dappr": ["agency", "power"]
+    },
+    {
+      "slug": "vango",
+      "title": "VANGO: The Art Passport",
+      "collection": "Research & Public Tools",
+      "pageCount": 16,
+      "recommendedWeeks": [4, 5],
+      "dappr": ["dignity", "agency", "reversibility"]
+    }
+  ]
+}
