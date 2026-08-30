@@ -11,28 +11,32 @@
 | Field | Value |
 | --- | --- |
 | Priority | P1 |
-| Status | Blocked |
-| Depends on | `yorkerhodes3/pageturn-book` V2-238 marked **Complete** with geometry-path promotion approved |
+| Status | Done - August 30, 2026 |
+| Original dependency | `yorkerhodes3/pageturn-book` V2-238 marked **Complete** with geometry-path promotion approved |
+| Resolution | Repository owner explicitly accepted the current broad V3 beta for paper link-outs |
 | Upstream epic | V2-230 through V2-238 |
-| Current integration | 21 CoLab publication links use the independently preserved Legacy viewer |
+| Current integration | All 21 CoLab publication links use canonical V3 `?book=<id>` routes |
 
-Replace the field guide's Legacy viewer links with the V3 semantic viewer only
-after the upstream semantic page-turn work is production-complete. The
-existence of the isolated V3 visual prototype does **not** satisfy this
-dependency.
+The original backlog item required formal upstream promotion. The owner
+subsequently reviewed the current V3 state and explicitly approved using it
+for this field guide. The migration therefore records an authorized scope
+change rather than incorrectly claiming upstream V2-238 is complete.
 
-### Dependency completion gate
+At migration time, upstream documented V3 as a broad beta across the full
+22-volume shelf: 21 Ethical Tech CoLab publications plus *Plurality*. The
+reader provides bounded chapter loading, canonical
+`?book=<id>&chapter=<id>#<source-anchor>` locations, browser history,
+per-publication typography, and sharing.
 
-The dependency is complete only when:
+### Completed migration
 
-1. upstream items V2-232 through V2-237 pass their implementation,
-   accessibility, browser, payload, and performance gates;
-2. upstream V2-238 records an approved promotion decision and is marked
-   **Complete**;
-3. a stable public V3 semantic route exists for every publication linked from
-   this field guide; and
-4. the Legacy viewer remains available as a rollback path until the field
-   guide migration is independently verified.
+- Replaced `readerBaseUrl` in `data/colab-library-manifest.json`.
+- Replaced `COLAB_READER_BASE` and generated paper links in
+  `docs/assets/content.js` and `docs/app.js`.
+- Updated all 21 paper links in `course/colab-library-alignment.md`.
+- Migrated chapter-specific *What Is Ethical AI?* references to canonical V3
+  chapter and source-anchor locations.
+- Preserved the upstream Legacy viewer as a separate rollback path.
 
 Upstream references:
 
@@ -40,25 +44,16 @@ Upstream references:
 - https://github.com/yorkerhodes3/pageturn-book/blob/main/BACKLOG.md#v2-238---decide-geometry-path-promotion
 - https://yorkerhodes3.github.io/pageturn-book/v3/
 
-As checked on August 30, 2026, V2-230 and V2-231 are complete; V2-232 through
-V2-238 remain ready rather than complete.
+### Verification
 
-### Migration scope
+- All 21 `?book=<id>` routes returned HTTP 200.
+- All 21 routes initialized in fresh Chromium pages with
+  `data-v3-ready="true"` and `aria-busy="false"`.
+- Every initialized document title matched its selected publication.
+- Chapter counts ranged from 7 to 20 and each publication composed a non-zero
+  page set.
+- The field guide's automated checks reject regression to Legacy paper URLs.
 
-- Replace `readerBaseUrl` in `data/colab-library-manifest.json`.
-- Replace `COLAB_READER_BASE` and generated reader links in
-  `docs/assets/content.js`.
-- Update the 21 links in `course/colab-library-alignment.md`.
-- Update source and portability documentation that describes the viewer.
-- Preserve publication slugs, semantic anchors, and accessible fallback
-  behavior.
-
-### Acceptance
-
-- All 21 publication links open the production V3 semantic viewer.
-- Every publication renders native semantic content without page-image
-  dependence.
-- Keyboard, focus, selection, reduced-motion, history, and responsive behavior
-  pass the upstream promotion matrix.
-- Link checks and a real-browser smoke test pass against the public routes.
-- The migration is committed and the live GitHub Pages dashboard is verified.
+The upstream formal promotion backlog remains authoritative for the reader
+project itself; this completed item records only the field guide owner's
+decision to adopt the current V3 beta for outbound paper links.

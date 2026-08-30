@@ -15,7 +15,7 @@ materials. It is not a complete bibliography for every topic raised.
 | ID | Source | Date / version | Stable anchors | Retrieval status |
 | --- | --- | --- | --- | --- |
 | P1 | Gates, Bill. ["The turbulent AI era is here. The choices we make now are critical."](https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med) | August 26, 2026 | Section headings: "This time really is different"; "three big risks"; "The good things"; "The world needs a plan"; three proposals | Tavily Extract returned the primary page. Generic direct fetch returned HTTP 403. |
-| P2 | Ethical Tech CoLab. ["01. Executive Summary,"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/) *What Is Ethical AI?* | Edition `2026-07`; chapter 1 of 17 | Chapter title and paragraph order; linked chapter slugs | Tavily Extract returned full page. Canonical CoLab publication metadata gives institutional authorship; no individual author is named. |
+| P2 | Ethical Tech CoLab. ["01. Executive Summary,"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary) *What Is Ethical AI?* | Edition `2026-07`; chapter 1 of 17 | V3 canonical book/chapter/source-anchor location | Tavily Extract returned the original public chapter page during research; the citation now opens its equivalent V3 semantic location. Canonical CoLab publication metadata gives institutional authorship; no individual author is named. |
 | P3 | Leo XIV. [*Magnifica Humanitas*](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) | Signed May 15, 2026; 245 numbered paragraphs | Canonical paragraph numbers (§) and chapter headings | Tavily Extract returned the full public page. |
 | P4 | Weyl, E. Glen; Audrey Tang; and the Plurality Community. [*Plurality* repository](https://github.com/pluralitybook/plurality) | Current release manifest: July 12, 2026; source revision `8615885`; earlier public edition 2024 | Repository paths, source revision, chapter IDs | Tavily Extract plus GitHub content/API. |
 | P5 | [RadicalxChange](https://www.radicalxchange.org/) | Live site, accessed August 30, 2026 | Page routes and mechanism wiki | Tavily Extract and Search. |
@@ -55,8 +55,8 @@ endorses P3 as a foundation for the work.
 
 Supplemental chapters used only to verify the summary's self-description:
 
-- ["Humanity's Relationship with Power"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/power/)
-- ["What Is Ethical AI?"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/what-is-ethical-ai/)
+- ["Humanity's Relationship with Power"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=power#power)
+- ["What Is Ethical AI?"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=what-is-ethical-ai#what-is-ethical-ai)
 
 ### P3 - *Magnifica Humanitas*
 
@@ -206,7 +206,7 @@ and UNGA materials:
 
 - [Public 21-book shelf](https://yorkerhodes3.github.io/pageturn-book/shelf/)
 - [Book-reader repository](https://github.com/yorkerhodes3/pageturn-book)
-- [CoLab chapter in *What Is Ethical AI?*](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/colab/)
+- [CoLab chapter in *What Is Ethical AI?*](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=colab#colab)
 - Pinned publication catalog revision:
   `b456e8e137a0b6ce9a51799b71c6091f5241b5d7`
 

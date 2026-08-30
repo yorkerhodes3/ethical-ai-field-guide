@@ -371,14 +371,14 @@
     });
 
     document.getElementById("colabGrid").innerHTML = publications.map(function (publication) {
-      var href = FG.colabLibrary.readerBase + "?book=" + encodeURIComponent(publication.slug) + "&view=book";
+      var href = FG.colabLibrary.readerBase + "?book=" + encodeURIComponent(publication.slug);
       return '<article class="colab-card">' +
         '<p class="colab-card__collection">' + esc(publication.collection) + "</p>" +
         '<h4>' + esc(publication.title) + "</h4>" +
         (publication.shelfTitle ? '<p class="colab-card__alias">Shelf label: ' + esc(publication.shelfTitle) + "</p>" : "") +
         '<p class="colab-card__meta">' + publication.pageCount + " pages · Weeks " + esc(publication.weeks.join(", ")) + "</p>" +
         '<div class="tag-row">' + publication.dappr.map(function (lens) { return '<span class="tag">' + esc(lens) + "</span>"; }).join("") + "</div>" +
-        '<a class="source-card__link" href="' + esc(href) + '" target="_blank" rel="noopener">Open reader ↗</a>' +
+        '<a class="source-card__link" href="' + esc(href) + '" target="_blank" rel="noopener">Open V3 semantic reader ↗</a>' +
         "</article>";
     }).join("") || '<p class="footnote">No CoLab publications match the current filters.</p>';
     document.getElementById("colabResultCount").textContent =

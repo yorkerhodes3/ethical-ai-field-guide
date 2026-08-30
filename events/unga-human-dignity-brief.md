@@ -27,7 +27,7 @@ the ability to contest consequential decisions, and remedy after harm.
 > that no one become merely a data source, risk score, target, labor input, or
 > recipient of a decision they cannot challenge.
 
-Bridge [*What Is Ethical AI?*](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/)
+Bridge [*What Is Ethical AI?*](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary)
 to [*Magnifica Humanitas*](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html):
 ethics is institutional across the lifecycle, and technology must be judged by
 whether it makes life more human, not only more efficient.

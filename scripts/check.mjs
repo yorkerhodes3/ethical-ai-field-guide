@@ -88,6 +88,12 @@ try {
         `dashboard data: expected 21 CoLab publications, found ${guide.colabLibrary.publications.length}`,
       );
     }
+    if (
+      guide.colabLibrary.readerBase !==
+      "https://yorkerhodes3.github.io/pageturn-book/v3/"
+    ) {
+      recordFailure("dashboard data: CoLab publications do not use the V3 semantic reader");
+    }
     if (guide.courseReadingShelf.length < 12) {
       recordFailure(
         `dashboard data: expected at least 12 course readings, found ${guide.courseReadingShelf.length}`,
@@ -142,16 +148,30 @@ for (const id of [
   }
 }
 
-const allDashboardText = (
-  await Promise.all(files.map((file) => readFile(file, "utf8")))
+const dataFiles = (await walk(resolve("data"))).filter(
+  (file) => extname(file) === ".json",
+);
+const projectTextFiles = [
+  ...files.filter((file) =>
+    [".html", ".css", ".js", ".svg", ".md", ".webmanifest"].includes(
+      extname(file),
+    ),
+  ),
+  ...markdownFiles,
+  ...dataFiles,
+];
+const allProjectText = (
+  await Promise.all(projectTextFiles.map((file) => readFile(file, "utf8")))
 ).join("\n");
 for (const deprecated of [
   "https://ai-futures.org/ai-2040-plan-a/",
   "https://www.gatesnotes.com/home/home-page-topic/reader/",
   "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2026/05/25/260525e.html",
+  "https://yorkerhodes3.github.io/pageturn-book/legacy/",
+  "https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/",
 ]) {
-  if (allDashboardText.includes(deprecated)) {
-    recordFailure(`dashboard contains deprecated source URL ${deprecated}`);
+  if (allProjectText.includes(deprecated)) {
+    recordFailure(`project contains deprecated paper URL ${deprecated}`);
   }
 }
 
@@ -243,9 +263,11 @@ if (
 const backlog = await readFile(resolve("BACKLOG.md"), "utf8");
 for (const dependencyText of [
   "Replace Legacy viewer links with the V3 semantic viewer",
-  "Depends on",
+  "Original dependency",
   "V2-238",
-  "Status | Blocked",
+  "Status | Done",
+  "explicitly approved",
+  "All 21",
 ]) {
   if (!backlog.includes(dependencyText)) {
     recordFailure(`BACKLOG.md: missing semantic-viewer dependency marker ${dependencyText}`);
@@ -269,13 +291,27 @@ for (const file of markdownFiles.filter((path) => extname(path) === ".md")) {
   }
 }
 
-for (const file of (await walk(resolve("data"))).filter((path) => extname(path) === ".json")) {
+for (const file of dataFiles) {
   try {
     JSON.parse(await readFile(file, "utf8"));
   } catch (error) {
     recordFailure(`${file}: invalid JSON (${error.message})`);
   }
 
+}
+
+const colabManifest = JSON.parse(
+  await readFile(resolve("data", "colab-library-manifest.json"), "utf8"),
+);
+if (
+  colabManifest.readerBaseUrl !==
+    "https://yorkerhodes3.github.io/pageturn-book/v3/" ||
+  colabManifest.readerRouteTemplate !== "?book={slug}" ||
+  colabManifest.publications.length !== 21
+) {
+  recordFailure(
+    "data/colab-library-manifest.json: expected 21 publications on the V3 ?book={slug} route",
+  );
 }
 
 try {

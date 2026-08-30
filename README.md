@@ -76,6 +76,10 @@ npm test
 No runtime dependencies, build step, analytics, cookies, or external fonts are
 used.
 
+All 21 Ethical Tech CoLab paper links open in the public V3 semantic geometry
+viewer. The independently preserved Legacy viewer remains an upstream rollback
+path rather than this field guide's default.
+
 ## What is portable
 
 Every major output has its own directory and relative links:

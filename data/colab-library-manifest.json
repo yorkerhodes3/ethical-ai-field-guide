@@ -5,7 +5,10 @@
   "sourceRepository": "https://github.com/yorkerhodes3/pageturn-book",
   "sourceRevision": "b456e8e137a0b6ce9a51799b71c6091f5241b5d7",
   "accessedAt": "2026-08-30",
-  "readerBaseUrl": "https://yorkerhodes3.github.io/pageturn-book/legacy/",
+  "readerBaseUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/",
+  "readerRouteTemplate": "?book={slug}",
+  "reader": "V3 semantic geometry",
+  "migrationApprovedAt": "2026-08-30",
   "publications": [
     {
       "slug": "what-is-ethical-ai",

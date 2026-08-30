@@ -2,7 +2,7 @@
 
 ## Source
 
-["01. Executive Summary,"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/)
+["01. Executive Summary,"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary)
 *What Is Ethical AI?*, July 2026 edition.
 
 **Genre:** executive summary for a 17-chapter public web book

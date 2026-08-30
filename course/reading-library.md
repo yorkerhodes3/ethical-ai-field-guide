@@ -9,7 +9,7 @@ instructor.
 
 | Work | Author / institution | Access | Best use in this course |
 | --- | --- | --- | --- |
-| [*What Is Ethical AI?*](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/) | Ethical Tech CoLab, NYU SPS Center for Global Affairs in collaboration with Microsoft (2026); no individual author named | Open web book | Spine for power, ethics, institutional accountability, humanitarian AI, human rights, and UN governance |
+| [*What Is Ethical AI?*](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary) | Ethical Tech CoLab, NYU SPS Center for Global Affairs in collaboration with Microsoft (2026); no individual author named | V3 semantic viewer | Spine for power, ethics, institutional accountability, humanitarian AI, human rights, and UN governance |
 | [*Magnifica Humanitas*](https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html) | Pope Leo XIV (2026) | Open primary source | Dignity, common good, subsidiarity, solidarity, work, truth, education, and critique of technocracy |
 | [*Plurality: The Future of Collaborative Technology and Democracy*](https://plurality.net/) | E. Glen Weyl, Audrey Tang, and the Plurality Community (2024) | Open web, PDF, ePub; CC0 | Democratic technology, collaboration across difference, digital public infrastructure, and institutional imagination |
 | [*AI 2027*](https://ai-2027.com/) | Daniel Kokotajlo, Eli Lifland, Thomas Larsen, Romeo Dean, with Scott Alexander (2025) | Open web and PDF | Forecast literacy, takeoff assumptions, causal chains, race dynamics, and narrative uncertainty |

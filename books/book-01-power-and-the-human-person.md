@@ -40,8 +40,8 @@ of power.
 
 **Primary pathway**
 
-- [*What Is Ethical AI?*, executive summary](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/)
-- ["Humanity's Relationship with Power"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/power/)
+- [*What Is Ethical AI?*, executive summary](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary)
+- ["Humanity's Relationship with Power"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=power#power)
 - [Gates, opening and "This time really is different"](https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med)
 
 **Studio:** Draw the power system around one AI use. Include infrastructure,
@@ -122,8 +122,8 @@ accountability fragments across institutions.
 
 **Primary pathway**
 
-- ["The Historical Evolution of AI in Humanitarian Work"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/humanitarian-history/)
-- ["Why Humanitarian AI Is Fundamentally Different"](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/humanitarian-difference/)
+- ["The Historical Evolution of AI in Humanitarian Work"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=humanitarian-history#humanitarian-history)
+- ["Why Humanitarian AI Is Fundamentally Different"](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=humanitarian-difference#humanitarian-difference)
 
 **Studio:** Write the future incident report and design the gate that could
 have prevented it.

@@ -32,7 +32,7 @@
   // Public GitHub repository that hosts the full project (this dashboard lives in
   // its docs/ folder). Used for "Project library" and audience-brief links.
   var REPO_BASE = "https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/";
-  var COLAB_READER_BASE = "https://yorkerhodes3.github.io/pageturn-book/legacy/";
+  var COLAB_READER_BASE = "https://yorkerhodes3.github.io/pageturn-book/v3/";
 
   var sources = [
     {
@@ -60,7 +60,7 @@
       org: "Ethical Tech CoLab",
       date: "2026-07",
       dateLabel: "Edition 2026-07",
-      url: "https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/",
+      url: "https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary",
       type: "executive-summary",
       typeLabel: "book executive summary",
       topics: ["governance", "rights", "process"],
@@ -587,7 +587,7 @@
     { id: "citation-ledger", title: "Citation & provenance ledger", path: "research/citation-ledger.md",
       description: "Per-source stable anchors, retrieval status, quotation ledger, and citation cautions for all nine sources." },
     { id: "backlog", title: "Dependency-aware backlog", path: "BACKLOG.md",
-      description: "Blocked follow-on work, including replacement of Legacy viewer links only after the upstream V3 semantic reader passes its production promotion gate." },
+      description: "Completed and future work, including the owner-approved migration of all 21 CoLab paper links from Legacy to the current V3 semantic reader." },
     { id: "third-party-notices", title: "Third-party visual asset notices", path: "THIRD-PARTY-NOTICES.md",
       description: "Attribution, source revisions, modifications, and retained licenses for the five existing-asset favicon compositions." }
   ];

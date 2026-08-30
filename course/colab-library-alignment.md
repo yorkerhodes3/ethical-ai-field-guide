@@ -7,6 +7,10 @@ currently presents 21 production publications in three collections. This map
 connects those existing books to the proposed semester rather than treating
 the course bibliography as a separate project.
 
+Every paper link in this map opens the V3 semantic viewer. The field guide
+owner approved the current broad V3 beta on August 30, 2026 after all 21 routes
+initialized successfully in browser validation.
+
 **Catalog source:** the pinned production catalog in
 `yorkerhodes3/pageturn-book`, revision
 `b456e8e137a0b6ce9a51799b71c6091f5241b5d7`, inspected August 30, 2026.
@@ -40,7 +44,7 @@ The three proposed sourcebooks add comparatively thinner areas:
 **Use:** the course spine. Assign the executive summary early, humanitarian
 chapters with the applied portfolio, and UN/governance chapters near the end.
 
-[Open the reader](https://yorkerhodes3.github.io/pageturn-book/book/what-is-ethical-ai/2026-07/chapters/executive-summary/)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary)
 
 ### 2. *AI's Carbon Footprint* - 18 pages
 
@@ -50,7 +54,7 @@ chapters with the applied portfolio, and UN/governance chapters near the end.
 hardware, place, and environmental justice. Ask who receives benefit and who
 hosts material cost.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=ai-carbon-footprint&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=ai-carbon-footprint)
 
 ### 3. *AI Model Performance* / shelf label *AI Models Research* - 19 pages
 
@@ -61,7 +65,7 @@ quality, reliability, latency, energy, token economics, privacy,
 controllability, and cost. Then ask which ethical criteria cannot be reduced
 to a model-selection metric.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=ai-models-research&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=ai-models-research)
 
 ### 4. *The Evacuation Readiness and Uncertainty Simulator (ERUS)* - 24 pages
 
@@ -71,7 +75,7 @@ to a model-selection metric.
 while underlying reality does not change. Pair the uncertainty slider with
 forecast calibration and humanitarian do-no-harm analysis.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=erus&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=erus)
 
 ### 5. *The Civilian Evacuation Risk Anticipation Index (CERAI)* - 13 pages
 
@@ -81,7 +85,7 @@ forecast calibration and humanitarian do-no-harm analysis.
 separate. A blocked evacuation does not erase the duty to protect; it changes
 the action required.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=cerai&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=cerai)
 
 ### 6. *Agentic Language Development* - 25 pages
 
@@ -91,7 +95,7 @@ the action required.
 the meaning its behavior actually uses. Strong case for auditability,
 emergence, and evidence that cannot be edited after the fact.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=agentic-language-development&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=agentic-language-development)
 
 ### 7. *The Only Winning Move* / shelf label *War Games* - 15 pages
 
@@ -101,7 +105,7 @@ emergence, and evidence that cannot be edited after the fact.
 malicious to create danger; courteous and literal pursuit of a task can be the
 problem. Pair with safety versus legitimacy.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=war-games&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=war-games)
 
 ## Humanitarian systems collection
 
@@ -114,7 +118,7 @@ status, information, and digital public goods. Its explicit refusal to build
 biometric identity for displaced people is a model of non-deployment as a
 public contribution.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=after-the-corridor&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=after-the-corridor)
 
 ### 9. *The Evacuation Risk and Cost Framework (ERCF)* - 32 pages
 
@@ -124,7 +128,7 @@ public contribution.
 financial cost estimates. Ask what a funding model makes visible and what it
 cannot price.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=ercf&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=ercf)
 
 ### 10. *The Evacuation Inform Index* - 11 pages
 
@@ -134,7 +138,7 @@ cannot price.
 outcome. Compare risk of leaving and staying while preserving duties when
 neither option is safe.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=evacuation-inform-index&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=evacuation-inform-index)
 
 ### 11. *The Evacuation Simulator* - 22 pages
 
@@ -144,7 +148,7 @@ neither option is safe.
 information shape departure. Ask whether an agent-based model preserves
 social difference or turns it into behavioral parameters.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=evacuation-simulation&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=evacuation-simulation)
 
 ### 12. *HASTE: High-speed Assessment and Satellite Tracking for Emergencies*
 - 26 pages
@@ -155,7 +159,7 @@ social difference or turns it into behavioral parameters.
 Excellent for asking what published performance does and does not authorize in
 an actual emergency.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=haste&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=haste)
 
 ### 13. *The Mariupol Corridor Severity Model* - 26 pages
 
@@ -165,7 +169,7 @@ an actual emergency.
 siege is not necessarily a safer day when deprivation, water, heat, medicine,
 and blocked corridors remain.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=mariupol-severity-model&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=mariupol-severity-model)
 
 ### 14. *The Forced Labor Structural Risk Index* - 25 pages
 
@@ -175,7 +179,7 @@ and blocked corridors remain.
 paradox: the same institutional weakness that permits exploitation can
 prevent it from being recorded.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=forced-labor-structural-risk-index&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=forced-labor-structural-risk-index)
 
 ## Research and public tools collection
 
@@ -187,7 +191,7 @@ prevent it from being recorded.
 Audit representation, omitted variables, unnamed model dependencies, and
 whether evaluation is strongest where subject knowledge is weakest.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=agentic-behavior-observatory&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=agentic-behavior-observatory)
 
 ### 16. *AI-Powered Research Questions* / shelf label *AI Research Assistant*
 - 10 pages
@@ -198,7 +202,7 @@ whether evaluation is strongest where subject knowledge is weakest.
 dialogic inquiry. Require source verification and ask whether assistance
 expands or narrows the researcher's agenda.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=ai-research-assistant&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=ai-research-assistant)
 
 ### 17. *Cyber Dictionary* - 44 pages
 
@@ -208,7 +212,7 @@ expands or narrows the researcher's agenda.
 Add contested definitions and identify which terms conceal an actor or value
 judgment.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=cyber-dictionary&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=cyber-dictionary)
 
 ### 18. *The Digital Provenance Passport* - 28 pages
 
@@ -217,7 +221,7 @@ judgment.
 **Use:** study source-addressed claims, readable arithmetic, and sealed output.
 Compare evidentiary provenance with model explainability.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=digital-provenance-passport&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=digital-provenance-passport)
 
 ### 19. *The Diplomatic Simulator* - 23 pages
 
@@ -227,7 +231,7 @@ Compare evidentiary provenance with model explainability.
 it is a teaching and exploration tool, not a forecast, and has no ground truth.
 Pair with Plan A's US-China bargain.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=diplomatic-simulator&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=diplomatic-simulator)
 
 ### 20. *Provenance Search* - 20 pages
 
@@ -237,7 +241,7 @@ Pair with Plan A's US-China bargain.
 missing history into false certainty. Strong preparation for citation and
 claim ledgers.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=provenance-search&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=provenance-search)
 
 ### 21. *VANGO: The Art Passport* - 16 pages
 
@@ -248,7 +252,7 @@ refuses to infer ownership, value, or authenticity. Ask students to define the
 one question their own prototype will answer and the tempting inferences it
 will refuse.
 
-[Open designed pages](https://yorkerhodes3.github.io/pageturn-book/legacy/?book=vango&view=book)
+[Open in the V3 semantic viewer](https://yorkerhodes3.github.io/pageturn-book/v3/?book=vango)
 
 ## Recommended semester clusters
 
