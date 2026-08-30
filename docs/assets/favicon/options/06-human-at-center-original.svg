@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Human at the Center</title>
+  <desc>Original art: a human figure centered inside a plural ring of colored nodes.</desc>
+  <rect width="64" height="64" rx="14" fill="#241c14"/>
+  <g>
+    <rect x="10" y="8" width="7" height="7" rx="2" fill="#d64933"/>
+    <rect x="22" y="8" width="7" height="7" rx="2" fill="#0eb1d2"/>
+    <rect x="35" y="8" width="7" height="7" rx="2" fill="#39b54a"/>
+    <rect x="47" y="8" width="7" height="7" rx="2" fill="#fbb03b"/>
+    <rect x="8" y="21" width="7" height="7" rx="2" fill="#0eb1d2"/>
+    <rect x="49" y="21" width="7" height="7" rx="2" fill="#39b54a"/>
+    <rect x="8" y="36" width="7" height="7" rx="2" fill="#39b54a"/>
+    <rect x="49" y="36" width="7" height="7" rx="2" fill="#0eb1d2"/>
+    <rect x="10" y="49" width="7" height="7" rx="2" fill="#fbb03b"/>
+    <rect x="22" y="49" width="7" height="7" rx="2" fill="#39b54a"/>
+    <rect x="35" y="49" width="7" height="7" rx="2" fill="#0eb1d2"/>
+    <rect x="47" y="49" width="7" height="7" rx="2" fill="#d64933"/>
+  </g>
+  <circle cx="32" cy="23" r="5" fill="#fbf5e8"/>
+  <path d="M19 31c4 2.2 8.3 3.3 13 3.3S41 33.2 45 31M32 31v13M32 42l-7 9M32 42l7 9" fill="none" stroke="#fbf5e8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

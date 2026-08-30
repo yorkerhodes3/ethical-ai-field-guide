@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0.0",
+  "default": "open-arms",
+  "generatedBy": "scripts/build-favicons.mjs",
+  "options": [
+    {
+      "id": "standing-in-plurality",
+      "name": "Standing in Plurality",
+      "kind": "existing-assets",
+      "file": "docs/assets/favicon/options/01-standing-in-plurality.svg",
+      "ingredients": [
+        "Plurality focus logo",
+        "Bootstrap Icons person-standing"
+      ],
+      "note": "Most literal standing-person treatment; the circular field separates the human from the detailed logo."
+    },
+    {
+      "id": "open-arms",
+      "name": "Open Arms",
+      "kind": "existing-assets",
+      "selected": true,
+      "file": "docs/assets/favicon/options/02-open-arms.svg",
+      "ingredients": [
+        "Adapted Plurality focus-logo lattice",
+        "Google Material accessibility_new"
+      ],
+      "note": "Selected default: no enclosing circle; the Plurality colors move to exposed, inset squares while the outstretched human remains clear at 16 pixels."
+    },
+    {
+      "id": "human-portrait",
+      "name": "Human Portrait",
+      "kind": "existing-assets",
+      "file": "docs/assets/favicon/options/03-human-portrait.svg",
+      "ingredients": [
+        "Plurality focus logo",
+        "Heroicons user"
+      ],
+      "note": "Strongest face/profile recognition at small sizes, though less expressive of a whole human body."
+    },
+    {
+      "id": "full-human",
+      "name": "Full Human",
+      "kind": "existing-assets",
+      "file": "docs/assets/favicon/options/04-full-human.svg",
+      "ingredients": [
+        "Plurality focus logo",
+        "Font Awesome person"
+      ],
+      "note": "A compact full-body silhouette; the vertical capsule protects it from background detail."
+    },
+    {
+      "id": "human-color",
+      "name": "Human in Color",
+      "kind": "existing-assets",
+      "file": "docs/assets/favicon/options/05-human-color.svg",
+      "ingredients": [
+        "Plurality focus logo",
+        "Google Noto Emoji standing person"
+      ],
+      "note": "Warmest and most recognizably human at larger sizes, but intentionally included as the detail-heavy small-size comparison."
+    },
+    {
+      "id": "human-at-center",
+      "name": "Human at the Center",
+      "kind": "original-art",
+      "file": "docs/assets/favicon/options/06-human-at-center-original.svg",
+      "ingredients": [
+        "Original node ring",
+        "Original human figure"
+      ],
+      "note": "Original art: a human is held inside a plural ring rather than covering the exact Plurality logo."
+    },
+    {
+      "id": "shared-humanity",
+      "name": "Shared Humanity",
+      "kind": "original-art",
+      "file": "docs/assets/favicon/options/07-shared-humanity-original.svg",
+      "ingredients": [
+        "Original overlapping fields",
+        "Original human portrait"
+      ],
+      "note": "Original art: overlapping plural fields create the shared space from which the human portrait emerges."
+    }
+  ]
+}

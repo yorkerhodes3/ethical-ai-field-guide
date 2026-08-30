@@ -30,8 +30,10 @@ const htmlFiles = files.filter((file) => extname(file) === ".html");
 const jsFiles = files.filter((file) => extname(file) === ".js");
 const markdownRoots = [
   "README.md",
+  "BACKLOG.md",
   "EXECUTIVE-BRIEF.md",
   "PORTABILITY.md",
+  "THIRD-PARTY-NOTICES.md",
   "CONTRIBUTING.md",
   "books",
   "course",
@@ -122,47 +124,53 @@ try {
   recordFailure(`docs/assets/content.js: data contract failed (${error.message})`);
 }
 
+const dashboardHtml = await readFile(resolve("docs", "index.html"), "utf8");
+for (const id of [
+  "sourceGrid",
+  "matrixTable",
+  "timelineList",
+  "weekGrid",
+  "colabGrid",
+  "courseShelfList",
+  "audiencePanels",
+  "promptDeck",
+  "projectLibraryList",
+  "methodologyBody",
+]) {
+  if (!dashboardHtml.includes(`id="${id}"`)) {
+    recordFailure(`docs/index.html: missing dashboard mount #${id}`);
+  }
+}
+
+const allDashboardText = (
+  await Promise.all(files.map((file) => readFile(file, "utf8")))
+).join("\n");
+for (const deprecated of [
+  "https://ai-futures.org/ai-2040-plan-a/",
+  "https://www.gatesnotes.com/home/home-page-topic/reader/",
+  "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2026/05/25/260525e.html",
+]) {
+  if (allDashboardText.includes(deprecated)) {
+    recordFailure(`dashboard contains deprecated source URL ${deprecated}`);
+  }
+}
+
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   if (!/<html[^>]*\blang=/i.test(html)) {
     recordFailure(`${file}: missing html lang attribute`);
-  }
-
-  const dashboardHtml = await readFile(resolve("docs", "index.html"), "utf8");
-  for (const id of [
-    "sourceGrid",
-    "matrixTable",
-    "timelineList",
-    "weekGrid",
-    "colabGrid",
-    "courseShelfList",
-    "audiencePanels",
-    "promptDeck",
-    "projectLibraryList",
-    "methodologyBody",
-  ]) {
-    if (!dashboardHtml.includes(`id="${id}"`)) {
-      recordFailure(`docs/index.html: missing dashboard mount #${id}`);
-    }
-  }
-
-  const allDashboardText = (
-    await Promise.all(files.map((file) => readFile(file, "utf8")))
-  ).join("\n");
-  for (const deprecated of [
-    "https://ai-futures.org/ai-2040-plan-a/",
-    "https://www.gatesnotes.com/home/home-page-topic/reader/",
-    "https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2026/05/25/260525e.html",
-  ]) {
-    if (allDashboardText.includes(deprecated)) {
-      recordFailure(`dashboard contains deprecated source URL ${deprecated}`);
-    }
   }
   if (!/<title>[^<]+<\/title>/i.test(html)) {
     recordFailure(`${file}: missing document title`);
   }
   if (!/<main(?:\s|>)/i.test(html)) {
     recordFailure(`${file}: missing main landmark`);
+  }
+  if (!/<link[^>]+rel=["']icon["'][^>]+favicon\.svg/i.test(html)) {
+    recordFailure(`${file}: missing SVG favicon link`);
+  }
+  if (!/<link[^>]+rel=["']apple-touch-icon["'][^>]+apple-touch-icon\.png/i.test(html)) {
+    recordFailure(`${file}: missing Apple touch icon link`);
   }
 
   const localReferences = [...html.matchAll(/\b(?:href|src)=["']([^"'#?]+)["']/gi)]
@@ -179,6 +187,68 @@ for (const file of htmlFiles) {
     } catch {
       recordFailure(`${file}: missing local asset ${reference}`);
     }
+  }
+}
+
+const faviconDir = resolve("docs", "assets", "favicon");
+const faviconOptions = (await readdir(resolve(faviconDir, "options"))).filter(
+  (name) => extname(name) === ".svg",
+);
+if (faviconOptions.length !== 7) {
+  recordFailure(`favicon assets: expected 7 SVG options, found ${faviconOptions.length}`);
+}
+const defaultFavicon = await readFile(resolve(faviconDir, "favicon.svg"), "utf8");
+const selectedFavicon = await readFile(
+  resolve(faviconDir, "options", "02-open-arms.svg"),
+  "utf8",
+);
+if (defaultFavicon !== selectedFavicon) {
+  recordFailure("favicon assets: deployed favicon differs from selected option 02-open-arms.svg");
+}
+
+for (const expected of [
+  { name: "favicon-32.png", width: 32, height: 32 },
+  { name: "apple-touch-icon.png", width: 180, height: 180 },
+]) {
+  const image = await readFile(resolve(faviconDir, expected.name));
+  const signature = image.subarray(1, 4).toString("ascii");
+  const width = image.readUInt32BE(16);
+  const height = image.readUInt32BE(20);
+  if (signature !== "PNG" || width !== expected.width || height !== expected.height) {
+    recordFailure(
+      `favicon assets: ${expected.name} expected ${expected.width}x${expected.height} PNG, found ${width}x${height}`,
+    );
+  }
+}
+
+const faviconManifest = JSON.parse(
+  await readFile(resolve("data", "favicon-options.json"), "utf8"),
+);
+const existingOptions = faviconManifest.options.filter(
+  (option) => option.kind === "existing-assets",
+);
+const originalOptions = faviconManifest.options.filter(
+  (option) => option.kind === "original-art",
+);
+if (
+  faviconManifest.default !== "open-arms" ||
+  existingOptions.length !== 5 ||
+  originalOptions.length !== 2
+) {
+  recordFailure(
+    "data/favicon-options.json: expected Open Arms default with five existing-asset and two original-art options",
+  );
+}
+
+const backlog = await readFile(resolve("BACKLOG.md"), "utf8");
+for (const dependencyText of [
+  "Replace Legacy viewer links with the V3 semantic viewer",
+  "Depends on",
+  "V2-238",
+  "Status | Blocked",
+]) {
+  if (!backlog.includes(dependencyText)) {
+    recordFailure(`BACKLOG.md: missing semantic-viewer dependency marker ${dependencyText}`);
   }
 }
 
@@ -205,6 +275,13 @@ for (const file of (await walk(resolve("data"))).filter((path) => extname(path) 
   } catch (error) {
     recordFailure(`${file}: invalid JSON (${error.message})`);
   }
+
+}
+
+try {
+  JSON.parse(await readFile(resolve("docs", "site.webmanifest"), "utf8"));
+} catch (error) {
+  recordFailure(`docs/site.webmanifest: invalid JSON (${error.message})`);
 }
 
 if (failures.length > 0) {

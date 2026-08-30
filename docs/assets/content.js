@@ -585,7 +585,11 @@
     { id: "unga-brief-full", title: "UNGA human dignity brief", path: "events/unga-human-dignity-brief.md",
       description: "A seven-minute speaking architecture, five policy asks, and anticipated questions for a multilateral audience." },
     { id: "citation-ledger", title: "Citation & provenance ledger", path: "research/citation-ledger.md",
-      description: "Per-source stable anchors, retrieval status, quotation ledger, and citation cautions for all nine sources." }
+      description: "Per-source stable anchors, retrieval status, quotation ledger, and citation cautions for all nine sources." },
+    { id: "backlog", title: "Dependency-aware backlog", path: "BACKLOG.md",
+      description: "Blocked follow-on work, including replacement of Legacy viewer links only after the upstream V3 semantic reader passes its production promotion gate." },
+    { id: "third-party-notices", title: "Third-party visual asset notices", path: "THIRD-PARTY-NOTICES.md",
+      description: "Attribution, source revisions, modifications, and retained licenses for the five existing-asset favicon compositions." }
   ];
 
   // Existing Ethical Tech CoLab library: 21 publications, supplemental teaching

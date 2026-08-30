@@ -1,0 +1,28 @@
+{
+  "name": "The Human Choice - AI, Power & Dignity Field Guide",
+  "short_name": "The Human Choice",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4ecdc",
+  "theme_color": "#241c14",
+  "icons": [
+    {
+      "src": "assets/favicon/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

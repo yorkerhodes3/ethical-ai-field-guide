@@ -34,6 +34,8 @@ any one source.
 - **Citation ledger:** [`research/citation-ledger.md`](research/citation-ledger.md)
 - **Research method and limits:** [`research/methodology.md`](research/methodology.md)
 - **How to move individual parts:** [`PORTABILITY.md`](PORTABILITY.md)
+- **Favicon design options:** [`docs/favicon-lab/`](docs/favicon-lab/)
+- **Dependency-aware backlog:** [`BACKLOG.md`](BACKLOG.md)
 
 ## Source set
 

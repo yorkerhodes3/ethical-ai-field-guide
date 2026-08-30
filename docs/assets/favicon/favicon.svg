@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+  <title>Open Arms</title>
+  <desc>An inset, color-distributed Plurality lattice behind Google's Material accessibility symbol.</desc>
+  <rect width="64" height="64" rx="14" fill="#241c14"/>
+  <rect x="8" y="8" width="6" height="6" rx="1.8" fill="#d64933"/>
+  <rect x="19" y="8" width="6" height="6" rx="1.8" fill="#0eb1d2"/>
+  <rect x="29" y="8" width="6" height="6" rx="1.8" fill="#39b54a"/>
+  <rect x="40" y="8" width="6" height="6" rx="1.8" fill="#fbb03b"/>
+  <rect x="50" y="8" width="6" height="6" rx="1.8" fill="#d64933"/>
+  <rect x="8" y="19" width="6" height="6" rx="1.8" fill="#0eb1d2"/>
+  <rect x="50" y="19" width="6" height="6" rx="1.8" fill="#39b54a"/>
+  <rect x="8" y="29" width="6" height="6" rx="1.8" fill="#39b54a"/>
+  <rect x="50" y="29" width="6" height="6" rx="1.8" fill="#0eb1d2"/>
+  <rect x="8" y="40" width="6" height="6" rx="1.8" fill="#fbb03b"/>
+  <rect x="50" y="40" width="6" height="6" rx="1.8" fill="#d64933"/>
+  <rect x="8" y="50" width="6" height="6" rx="1.8" fill="#0eb1d2"/>
+  <rect x="19" y="50" width="6" height="6" rx="1.8" fill="#39b54a"/>
+  <rect x="29" y="50" width="6" height="6" rx="1.8" fill="#fbb03b"/>
+  <rect x="40" y="50" width="6" height="6" rx="1.8" fill="#d64933"/>
+  <rect x="50" y="50" width="6" height="6" rx="1.8" fill="#0eb1d2"/>
+  <svg x="12.5" y="12.5" width="39" height="39" viewBox="0 0 24 24" fill="#241c14" opacity="1" overflow="visible"><path d="M0 0h24v24H0z" fill="none"/><path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+  <svg x="14" y="14" width="36" height="36" viewBox="0 0 24 24" fill="#fbf5e8" opacity="1" overflow="visible"><path d="M0 0h24v24H0z" fill="none"/><path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg>
+</svg>

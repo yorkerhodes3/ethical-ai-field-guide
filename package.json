@@ -5,6 +5,7 @@
   "description": "Source-grounded AI, power, and dignity research dashboard and teaching package",
   "type": "module",
   "scripts": {
+    "build:favicons": "node scripts/build-favicons.mjs",
     "serve": "node scripts/serve.mjs",
     "test": "node scripts/check.mjs"
   },
