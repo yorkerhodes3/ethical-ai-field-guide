@@ -33,6 +33,12 @@
   // its docs/ folder). Used for "Project library" and audience-brief links.
   var REPO_BASE = "https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/";
   var COLAB_READER_BASE = "https://yorkerhodes3.github.io/pageturn-book/v3/";
+  var SOURCE_GUIDE_BOOK = "human-choice-source-guide";
+
+  function sourceGuideUrl(chapter) {
+    return COLAB_READER_BASE + "?book=" + SOURCE_GUIDE_BOOK +
+      "&chapter=" + chapter + "#" + chapter;
+  }
 
   var sources = [
     {
@@ -43,6 +49,8 @@
       org: "Gates Notes",
       date: "2026-08-26",
       url: "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med",
+      readerUrl: sourceGuideUrl("gates-turbulent-ai-era"),
+      readerMode: "source-guide",
       type: "essay",
       typeLabel: "public policy essay",
       topics: ["work", "power", "risk", "governance"],
@@ -60,7 +68,9 @@
       org: "Ethical Tech CoLab",
       date: "2026-07",
       dateLabel: "Edition 2026-07",
-      url: "https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary",
+      url: "https://ethical-tech-colab.github.io/what-is-ethical-ai/",
+      readerUrl: COLAB_READER_BASE + "?book=what-is-ethical-ai&chapter=executive-summary#executive-summary",
+      readerMode: "full-source",
       type: "executive-summary",
       typeLabel: "book executive summary",
       topics: ["governance", "rights", "process"],
@@ -78,6 +88,8 @@
       date: "2026-05-15",
       dateLabel: "Signed 15 May 2026",
       url: "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+      readerUrl: sourceGuideUrl("magnifica-humanitas"),
+      readerMode: "source-guide",
       type: "encyclical",
       typeLabel: "encyclical",
       topics: ["dignity", "power", "labor", "truth"],
@@ -96,6 +108,8 @@
       dateLabel: "Release manifest 12 Jul 2026",
       dateNote: "Current repository release manifest is dated July 12, 2026 (source revision 8615885); the book also circulated publicly in 2024.",
       url: "https://github.com/pluralitybook/plurality",
+      readerUrl: sourceGuideUrl("plurality-book-and-repository"),
+      readerMode: "source-guide",
       license: "CC0-1.0",
       type: "repository",
       typeLabel: "open collaborative repository",
@@ -114,6 +128,10 @@
       date: "ongoing",
       dateLabel: "Live reading interface",
       url: "https://plurality.net/",
+      readerUrl: sourceGuideUrl("plurality-dot-net"),
+      readerMode: "source-guide",
+      relatedReaderUrl: COLAB_READER_BASE + "?book=plurality&chapter=1",
+      relatedReaderLabel: "Read the full Plurality book in V3",
       type: "reading-interface",
       typeLabel: "public reading interface",
       topics: ["democracy", "collaboration"],
@@ -131,6 +149,8 @@
       date: "ongoing",
       dateLabel: "Live site",
       url: "https://www.radicalxchange.org/",
+      readerUrl: sourceGuideUrl("radicalxchange"),
+      readerMode: "source-guide",
       type: "organization",
       typeLabel: "nonprofit website, mechanism library, and project portfolio",
       topics: ["democracy", "governance", "pilots"],
@@ -148,6 +168,8 @@
       date: "2025-04-03",
       dateLabel: "Published 3 Apr 2025",
       url: "https://ai-2027.com/",
+      readerUrl: sourceGuideUrl("ai-2027"),
+      readerMode: "source-guide",
       type: "scenario",
       typeLabel: "predictive scenario",
       topics: ["power", "risk", "forecasting"],
@@ -164,6 +186,8 @@
       date: "2026",
       dateLabel: "Published 2026",
       url: "https://ai-2040.com/",
+      readerUrl: sourceGuideUrl("ai-2040-plan-a"),
+      readerMode: "source-guide",
       type: "scenario-recommendation",
       typeLabel: "recommendation in scenario form",
       topics: ["power", "governance", "reversibility"],
@@ -183,6 +207,8 @@
       dateLabel: "Undated ([DATE] placeholder)",
       dateNote: "The document contains a literal \u201C[DATE]\u201D placeholder rather than a stated publication date.",
       url: "https://docs.google.com/document/d/1JQRiPaIs8ouB9kUVEs-ht--jgEzxv-ty/edit",
+      readerUrl: sourceGuideUrl("ai-2040-reading-group-handout"),
+      readerMode: "source-guide",
       type: "handout",
       typeLabel: "event handout",
       topics: ["forecasting", "governance", "discussion"],
@@ -671,8 +697,8 @@
       body: "Dignity, Agency, Plurality, Power, and Reversibility are this guide's own reading framework for comparing the sources. No anchor source proposes \u201CDAPPR\u201D by name \u2014 it is offered here as a study tool, grounded in recurring source concerns, and labeled as synthesis throughout."
     },
     {
-      heading: "All nine sources link directly",
-      body: "Every source card links directly to its primary public page. Two sources \u2014 the \u201CWhat Is Ethical AI?\u201D executive summary and the AI 2040 reading-group handout \u2014 are public documents whose publication metadata differs from the others: the executive summary carries institutional rather than individual authorship, and the handout does not state an author or a publication date (it contains a literal \u201C[DATE]\u201D placeholder). Both facts are shown as badges on their source cards rather than treated as missing links."
+      heading: "All nine sources open in V3",
+      body: "Every source card now opens a canonical V3 semantic location. Where a complete licensed semantic edition exists, the link opens that publication directly; otherwise it opens the matching chapter in The Human Choice source guide, which contains original analysis rather than a copy of the third-party page. A separate original-source link always preserves provenance and access to the publisher's current version. The Ethical AI executive summary carries institutional rather than individual authorship, and the AI 2040 handout does not state an author or publication date; both facts remain visible on their cards."
     },
     {
       heading: "Scenario discipline",

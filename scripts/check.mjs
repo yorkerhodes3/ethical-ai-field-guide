@@ -109,6 +109,16 @@ try {
       if (!/^https:\/\//.test(source.url)) {
         recordFailure(`dashboard data: source ${source.id} lacks an HTTPS primary URL`);
       }
+      if (
+        !/^https:\/\/yorkerhodes3\.github\.io\/pageturn-book\/v3\/\?book=/.test(
+          source.readerUrl,
+        )
+      ) {
+        recordFailure(`dashboard data: source ${source.id} lacks a canonical V3 reader URL`);
+      }
+      if (!["full-source", "source-guide"].includes(source.readerMode)) {
+        recordFailure(`dashboard data: source ${source.id} has an invalid reader mode`);
+      }
     }
 
     for (const item of [...guide.claims, ...guide.timeline]) {

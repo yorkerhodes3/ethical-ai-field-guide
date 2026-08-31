@@ -31,6 +31,32 @@
     return null;
   }
 
+  function sourceReaderUrl(source) {
+    return source.readerUrl || source.url;
+  }
+
+  function sourceReaderLabel(source) {
+    return source.readerMode === "full-source"
+      ? "Read source in V3"
+      : "Read source guide in V3";
+  }
+
+  function sourceActionsHtml(source, compact) {
+    var readerClass = compact ? "btn btn--ghost" : "source-card__link";
+    var originalClass = compact ? "btn btn--ghost" : "source-card__link source-card__link--secondary";
+    var related = source.relatedReaderUrl
+      ? '<a class="' + readerClass + '" href="' + esc(source.relatedReaderUrl) +
+        '" target="_blank" rel="noopener">' + esc(source.relatedReaderLabel || "Read related book in V3") + " ↗</a>"
+      : "";
+    return '<span class="source-actions">' +
+      '<a class="' + readerClass + '" href="' + esc(sourceReaderUrl(source)) +
+      '" target="_blank" rel="noopener">' + esc(sourceReaderLabel(source)) + " ↗</a>" +
+      related +
+      '<a class="' + originalClass + '" href="' + esc(source.url) +
+      '" target="_blank" rel="noopener">Open original source ↗</a>' +
+      "</span>";
+  }
+
   function labelPill(label) {
     return '<span class="label-pill label-pill--' + esc(label) + '">' + esc(labelText[label] || label) + "</span>";
   }
@@ -46,8 +72,9 @@
     return sourceIds.map(function (sid) {
       var s = sourceById(sid);
       if (!s) return "";
-      return '<a class="source-card__link" href="' + esc(s.url) + '"' +
-        (s.url.charAt(0) === "#" ? "" : ' target="_blank" rel="noopener"') +
+      var href = sourceReaderUrl(s);
+      return '<a class="source-card__link" href="' + esc(href) + '"' +
+        (href.charAt(0) === "#" ? "" : ' target="_blank" rel="noopener"') +
         '>' + esc(s.shortName) + " ↗</a>";
     }).join(" ");
   }
@@ -219,7 +246,7 @@
       (s.license ? '<p class="source-card__note"><strong>Source license:</strong> ' + esc(s.license) + "</p>" : "") +
       '<div class="tag-row">' + s.topics.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div>" +
       '<p class="footnote">' + claimCount + " tracked claim" + (claimCount === 1 ? "" : "s") + " from this source</p>" +
-      '<a class="source-card__link" href="' + esc(s.url) + '" target="_blank" rel="noopener">Read primary source ↗</a>' +
+      sourceActionsHtml(s, false) +
       "</article>";
   }
 
@@ -320,7 +347,7 @@
         '<span class="library-item__date">' + esc(s.dateLabel || s.date || "Date not stated") + "</span>" +
         '<span><span class="library-item__title">' + esc(s.title) + "</span><br>" +
         '<span class="library-item__author">' + esc(s.author || "Author not stated") + " — " + esc(s.org) + "</span></span>" +
-        '<a class="btn btn--ghost" href="' + esc(s.url) + '" target="_blank" rel="noopener">Read ↗</a>' +
+        sourceActionsHtml(s, true) +
         "</div>";
     }).join("");
   }

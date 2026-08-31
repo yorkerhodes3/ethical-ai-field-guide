@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "project": "The Human Choice: AI, Power & Dignity Field Guide",
   "accessedAt": "2026-08-30",
   "retrieval": {
@@ -9,6 +9,12 @@
     "discovery": "Tavily Search API",
     "note": "Raw third-party page extractions are not redistributed."
   },
+  "reader": {
+    "name": "V3 semantic geometry",
+    "baseUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/",
+    "sourceGuideBookId": "human-choice-source-guide",
+    "policy": "Use a complete semantic source edition where available; otherwise use the matching first-party source-guide chapter and retain the original publisher URL."
+  },
   "sources": [
     {
       "id": "gates-turbulent-ai-era",
@@ -17,6 +23,8 @@
       "publisher": "Gates Notes",
       "publishedAt": "2026-08-26",
       "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=gates-turbulent-ai-era#gates-turbulent-ai-era",
+      "readerMode": "source-guide",
       "genre": "public policy essay",
       "primaryEpistemicTypes": [
         "source claim",
@@ -31,7 +39,9 @@
       "author": "Ethical Tech CoLab; NYU School of Professional Studies Center for Global Affairs, in collaboration with Microsoft",
       "authorNote": "Canonical publication metadata gives institutional authorship; no individual author is named.",
       "edition": "2026-07",
-      "url": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary",
+      "url": "https://ethical-tech-colab.github.io/what-is-ethical-ai/",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=what-is-ethical-ai&chapter=executive-summary#executive-summary",
+      "readerMode": "full-source",
       "genre": "book executive summary",
       "primaryEpistemicTypes": [
         "normative argument",
@@ -47,6 +57,8 @@
       "author": "Pope Leo XIV",
       "signedAt": "2026-05-15",
       "url": "https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=magnifica-humanitas#magnifica-humanitas",
+      "readerMode": "source-guide",
       "genre": "encyclical",
       "primaryEpistemicTypes": [
         "theological claim",
@@ -63,6 +75,8 @@
       "releaseNote": "Current repository release; the book also circulated in 2024.",
       "sourceRevision": "86158859464aee75633acd854c656928121a7fd8",
       "url": "https://github.com/pluralitybook/plurality",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=plurality-book-and-repository#plurality-book-and-repository",
+      "readerMode": "source-guide",
       "license": "CC0-1.0",
       "genre": "open collaborative book and governance repository",
       "primaryEpistemicTypes": [
@@ -78,6 +92,8 @@
       "title": "RadicalxChange",
       "author": "RadicalxChange Foundation",
       "url": "https://www.radicalxchange.org/",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=radicalxchange#radicalxchange",
+      "readerMode": "source-guide",
       "genre": "nonprofit website, mechanism library, and project portfolio",
       "primaryEpistemicTypes": [
         "organizational position",
@@ -91,6 +107,9 @@
       "title": "Plurality.net",
       "author": "Plurality book project",
       "url": "https://plurality.net/",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=plurality-dot-net#plurality-dot-net",
+      "readerMode": "source-guide",
+      "relatedReaderUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=plurality&chapter=1",
       "genre": "public reading and distribution interface",
       "primaryEpistemicTypes": [
         "organizational position",
@@ -104,6 +123,8 @@
       "author": "Daniel Kokotajlo, Eli Lifland, Thomas Larsen, and Romeo Dean",
       "publishedAt": "2025-04-03",
       "url": "https://ai-2027.com/",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=ai-2027#ai-2027",
+      "readerMode": "source-guide",
       "genre": "predictive scenario",
       "primaryEpistemicTypes": [
         "scenario",
@@ -118,6 +139,8 @@
       "author": "Thomas Larsen, Romeo Dean, Brendan Halstead, Eli Lifland, Ryan Greenblatt, and Daniel Kokotajlo",
       "publishedAt": "2026",
       "url": "https://ai-2040.com/",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=ai-2040-plan-a#ai-2040-plan-a",
+      "readerMode": "source-guide",
       "genre": "recommendation in scenario form",
       "primaryEpistemicTypes": [
         "recommendation",
@@ -134,6 +157,8 @@
       "publishedAt": null,
       "dateNote": "The document contains a [DATE] placeholder.",
       "url": "https://docs.google.com/document/d/1JQRiPaIs8ouB9kUVEs-ht--jgEzxv-ty/edit",
+      "readerUrl": "https://yorkerhodes3.github.io/pageturn-book/v3/?book=human-choice-source-guide&chapter=ai-2040-reading-group-handout#ai-2040-reading-group-handout",
+      "readerMode": "source-guide",
       "genre": "event handout",
       "primaryEpistemicTypes": [
         "source summary",

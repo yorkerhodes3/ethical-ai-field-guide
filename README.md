@@ -80,6 +80,11 @@ All 21 Ethical Tech CoLab paper links open in the public V3 semantic geometry
 viewer. The independently preserved Legacy viewer remains an upstream rollback
 path rather than this field guide's default.
 
+All nine anchor-source links also open in V3. Complete semantic editions open
+directly where available; the remaining links open the corresponding chapter in
+the portable *Human Choice: Source Guide*. Each dashboard card retains a
+separate original-publisher link for provenance and current-version checking.
+
 ## What is portable
 
 Every major output has its own directory and relative links:

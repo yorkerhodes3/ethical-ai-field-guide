@@ -218,6 +218,10 @@ select#typeFilterSelect {
 .label-pill--synthesis { background: var(--accent-3-soft); color: var(--accent-3); }
 .label-pill--question { background: var(--paper-deep); color: var(--ink-soft); }
 .source-card__link { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; align-self: flex-start; }
+.source-actions { display: flex; flex-wrap: wrap; gap: 0.45rem 0.8rem; align-items: center; }
+.source-card > .source-actions { margin-top: auto; }
+.source-card__link--secondary { color: var(--ink-soft); font-weight: 500; }
+.library-item .source-actions { justify-content: flex-end; max-width: 28rem; }
 
 /* ---------- Tabs (lenses / audiences) ---------- */
 .tabs__list { display: flex; flex-wrap: wrap; gap: 0.35rem; border-bottom: 2px solid var(--rule); margin-bottom: 1rem; }
@@ -428,6 +432,7 @@ select#typeFilterSelect {
     grid-template-columns: minmax(0, 1fr);
   }
   .library-item { grid-template-columns: 1fr; }
+  .library-item .source-actions { justify-content: flex-start; }
   .project-library-item { grid-template-columns: 1fr; }
 }
 
