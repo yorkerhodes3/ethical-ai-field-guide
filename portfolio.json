@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "ethical-ai-field-guide",
+  "title": "The Human Choice: AI, Power & Dignity Field Guide",
+  "repo": "yorkerhodes3/ethical-ai-field-guide",
+  "summary": "A source-grounded briefing and teaching package on AI, power and human dignity, with a static dashboard, course map, event briefs and interactive demos for classes, salons and policy discussions.",
+  "kind": "research",
+  "methodTags": [
+    "provenance"
+  ],
+  "domainTags": [
+    "ai-governance",
+    "education",
+    "global-affairs"
+  ],
+  "contribution": {
+    "date": "2026-08-31",
+    "role": "built",
+    "credits": []
+  },
+  "narrative": {
+    "problem": "Discussion of the AI transition often mixes dated scenarios, authors' claims and recommendations as if they were settled fact. The project asks how societies can remain the authors of the AI transition rather than merely its audience, starting from nine supplied sources.",
+    "decision": "Labels every claim by type (observed fact, source claim, scenario, recommendation, synthesis or question) and anchors deliverables to primary sources, so the dated narratives of AI 2027 and AI 2040 are never presented as established facts.",
+    "tradeoff": "Working from nine anchor sources and labeled claims keeps the analysis auditable but narrows its coverage, and the DAPPR synthesis is the project's own framework rather than one any single source claims.",
+    "limitation": "A draft with no public reuse license yet; it rests on nine supplied sources retrieved on August 30, 2026, and its demos are teaching exercises with no reported evaluation.",
+    "caveat": "DAPPR is this project's own interpretive framework. Scenario content is labeled as scenario, and the self-assessment demos are teaching exercises, not legal, compliance or human-rights reviews."
+  },
+  "evidence": {
+    "level": "working-demo",
+    "links": [
+      {
+        "label": "Latest commit",
+        "url": "https://github.com/yorkerhodes3/ethical-ai-field-guide/commit/3ed42c0a4b6373f1ab1551f4185172522ce1ce34",
+        "date": "2026-08-31"
+      },
+      {
+        "label": "README",
+        "url": "https://github.com/yorkerhodes3/ethical-ai-field-guide#readme",
+        "date": "2026-08-31"
+      },
+      {
+        "label": "Executive brief",
+        "url": "https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/EXECUTIVE-BRIEF.md",
+        "date": "2026-08-31"
+      },
+      {
+        "label": "Consolidated point of view",
+        "url": "https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/research/consolidated-point-of-view.md",
+        "date": "2026-08-31"
+      },
+      {
+        "label": "Research method and limits",
+        "url": "https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/research/methodology.md",
+        "date": "2026-08-31"
+      },
+      {
+        "label": "Citation ledger",
+        "url": "https://github.com/yorkerhodes3/ethical-ai-field-guide/blob/main/research/citation-ledger.md",
+        "date": "2026-08-31"
+      }
+    ]
+  },
+  "links": {
+    "source": "https://github.com/yorkerhodes3/ethical-ai-field-guide"
+  },
+  "images": [
+    {
+      "id": "dashboard",
+      "src": ".portfolio/dashboard.webp",
+      "alt": "Field guide dashboard titled The Human Choice with a section menu, an executive thesis on nine anchor sources and the five DAPPR lenses, counts for sources, lenses, course weeks and demos, and a read-before-you-rely notice.",
+      "caption": "The executive thesis, with its notice that claims are labeled and scenario milestones are never presented as fact.",
+      "credit": "Screenshot of The Human Choice field guide site",
+      "source": "screenshot of docs/index.html"
+    },
+    {
+      "id": "dignity-audit",
+      "src": ".portfolio/dignity-audit.webp",
+      "alt": "Dignity & Agency Audit demo with a notice stating what the checklist is and is not, a system name field, reset, print and export buttons, and five 0/4 score tiles for dignity, agency, plurality, power and reversibility.",
+      "caption": "One of three portable demos: a DAPPR self-assessment checklist that states it is not a legal or compliance audit.",
+      "credit": "Screenshot of The Human Choice field guide site",
+      "source": "screenshot of docs/demos/dignity-agency-audit/index.html"
+    },
+    {
+      "id": "favicon-study",
+      "src": ".portfolio/favicon-study.webp",
+      "alt": "Visual identity lab page titled Plurality + human favicon study, describing five candidates built from existing assets and two original ones, with the deployed Open Arms icon shown beside its rationale.",
+      "caption": "A documented design study for the guide's icon, recording which candidates reuse the CC0 Plurality logo geometry.",
+      "credit": "Screenshot of The Human Choice field guide site",
+      "source": "screenshot of docs/favicon-lab/index.html"
+    }
+  ],
+  "defaultImageId": "dashboard"
+}
